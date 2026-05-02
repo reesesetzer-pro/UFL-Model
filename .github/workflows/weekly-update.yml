@@ -52,11 +52,11 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add data/parsed/ data/ratings/ 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "Auto: weekly ratings refresh $(date -u +%Y-%m-%dZ)"
-            git push
+            exit 0
           fi
+          git commit -m "Auto: weekly ratings refresh $(date -u +%Y-%m-%dZ)"
+          git pull --rebase origin main
+          git push
