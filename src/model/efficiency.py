@@ -148,12 +148,19 @@ def rollup_team_game(parsed_game: dict, team_side: str) -> TeamGameEfficiency:
             if sp and (sp.get("yards") or 0) >= 60:
                 d["fg_points"] = 4
 
+    # PPD must reflect *full* team scoring (incl. PATs and any defensive/ST
+    # contribution captured in linescore_total) so the projector's LEAGUE_MU_PPD
+    # and the team off/def regression coefficients live in the same unit space.
+    # Using bare drive_points here would give drive-points PPD (no PAT) which
+    # is ~0.34 below full PPD — a unit mismatch when the projector predicts
+    # total points.
+    points_full = float(tot.get("linescore_total") or 0.0)
     eff = TeamGameEfficiency(
         team=team, opponent=opp, is_home=is_home,
         sb_id=parsed_game.get("game_id") or parsed_game.get("sb_id", 0),
         week=parsed_game.get("week", 0),
         drives=len(drives),
-        points_off=total_drive_points(drives),
+        points_off=points_full,
         yards_off=float(tot.get("total_yards") or 0.0),
         plays_off=int(tot.get("plays") or 0),
         success_drives=sum(1 for d in drives if is_drive_success(d)),
@@ -245,7 +252,7 @@ def opponent_adjusted_ppd(efficiencies: list[TeamGameEfficiency],
 # UFL games average ~22-24 drives total in 2024/25; 2026 rule changes
 # (no-punt zone, alt KO) probably nudge that to ~24-26.
 
-DEFAULT_TOTAL_DRIVES: float = 24.0
+DEFAULT_TOTAL_DRIVES: float = 20.5  # 2026 realized: 431 drives / 21 games
 
 
 def project_drive_count(team_a: TeamGameEfficiency, team_b: TeamGameEfficiency,

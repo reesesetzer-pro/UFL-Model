@@ -65,8 +65,8 @@ class GameProjection:
 def project_game(home: str, away: str,
                  elo: dict[str, TeamElo],
                  ppd_adj: dict[str, dict[str, float]],
-                 league_mu_ppd: float = LEAGUE_MU_PPD,
-                 ppd_hfa: float = EFFICIENCY_HFA_PPD,
+                 league_mu_ppd: Optional[float] = None,
+                 ppd_hfa: Optional[float] = None,
                  expected_drives_total: float = DEFAULT_TOTAL_DRIVES,
                  elo_blend_weight: float = ELO_BLEND_WEIGHT,
                  sigma_total: float = SIGMA_TOTAL,
@@ -77,7 +77,17 @@ def project_game(home: str, away: str,
     elo: {code: TeamElo}
     ppd_adj: {code: {"off","def","n"}, "__league__": {"mu_ppd","hfa"}} from
              opponent_adjusted_ppd()
+
+    league_mu_ppd / ppd_hfa default to the regression-learned values in
+    ppd_adj["__league__"] so off/def coefs and the baseline live in the same
+    space. Override only if you know what you're doing.
     """
+    league = ppd_adj.get("__league__") or {}
+    if league_mu_ppd is None:
+        league_mu_ppd = league.get("mu_ppd", LEAGUE_MU_PPD)
+    if ppd_hfa is None:
+        ppd_hfa = league.get("hfa", EFFICIENCY_HFA_PPD)
+
     h_elo = elo[home].rating
     a_elo = elo[away].rating
 
