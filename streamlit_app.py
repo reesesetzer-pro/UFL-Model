@@ -31,7 +31,12 @@ from src.data.schedule import (
 from src.model.prior_blend import model_weight
 
 # --------------------------------------------------------------------------
-st.set_page_config(page_title="UFL Model", page_icon="🏈", layout="wide")
+_FAVICON = Path(__file__).resolve().parent / "static" / "ufl_favicon.ico"
+st.set_page_config(
+    page_title="UFL Model",
+    page_icon=str(_FAVICON) if _FAVICON.exists() else "🏈",
+    layout="wide",
+)
 
 DATA_DIR = Path("data")
 RATINGS_DIR = DATA_DIR / "ratings"
