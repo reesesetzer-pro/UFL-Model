@@ -22,6 +22,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+except ImportError:
+    pass
+
 from src.ingest.odds_api import (
     fetch_odds, fetch_scores, list_events, flatten_odds,
     APPROVED_BOOKS, SPORT_KEY,
@@ -45,7 +51,6 @@ def run_snapshot(api_key: str | None = None,
     ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M")
 
     raw = fetch_odds(api_key=api_key,
-                     sport=UFL_SPORT_KEY,
                      bookmakers=list(APPROVED_BOOKS),
                      markets=markets,
                      odds_format=odds_format)

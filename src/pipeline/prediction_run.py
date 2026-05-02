@@ -32,6 +32,12 @@ from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+except ImportError:
+    pass
+
 from src.data.schedule import (
     upcoming_games, schedule_by_id, games_played_through, all_team_codes,
     GameSlot,
@@ -89,7 +95,46 @@ def load_latest_odds_csv() -> list[dict]:
     if not p:
         return []
     with p.open() as f:
-        return list(csv.DictReader(f))
+        return _expand_wide_odds(list(csv.DictReader(f)))
+
+
+def _expand_wide_odds(rows: list[dict]) -> list[dict]:
+    """flatten_odds writes one row per (game,book,market) with home/away/over/
+    under prices columns. build_market_consensus wants one row per side with
+    `name` + `price`. Expand here."""
+    long_rows: list[dict] = []
+    for r in rows:
+        market = r.get("market")
+        common = {
+            "event_id": r.get("game_id") or r.get("id") or r.get("event_id"),
+            "home_team": r.get("home_team"),
+            "away_team": r.get("away_team"),
+            "commence_time": r.get("commence_time"),
+            "book": r.get("book"),
+            "market_key": market,
+            "last_update": r.get("last_update"),
+        }
+        point = r.get("point")
+        if market == "h2h":
+            if r.get("home_price") not in (None, ""):
+                long_rows.append({**common, "name": r["home_team"], "price": r["home_price"], "point": None})
+            if r.get("away_price") not in (None, ""):
+                long_rows.append({**common, "name": r["away_team"], "price": r["away_price"], "point": None})
+        elif market == "spreads":
+            if r.get("home_price") not in (None, ""):
+                long_rows.append({**common, "name": r["home_team"], "price": r["home_price"], "point": point})
+            if r.get("away_price") not in (None, ""):
+                try:
+                    away_pt = -float(point) if point not in (None, "") else None
+                except (TypeError, ValueError):
+                    away_pt = None
+                long_rows.append({**common, "name": r["away_team"], "price": r["away_price"], "point": away_pt})
+        elif market == "totals":
+            if r.get("over_price") not in (None, ""):
+                long_rows.append({**common, "name": "Over", "price": r["over_price"], "point": point})
+            if r.get("under_price") not in (None, ""):
+                long_rows.append({**common, "name": "Under", "price": r["under_price"], "point": point})
+    return long_rows
 
 
 # --------------------------------------------------------------------------

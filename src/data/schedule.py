@@ -169,9 +169,11 @@ def games_played_through(d: date) -> list[GameSlot]:
 
 
 def upcoming_games(d: date, days_ahead: int = 7) -> list[GameSlot]:
+    """Games scheduled today through `days_ahead` days from now (inclusive on
+    both ends — today's games still count as upcoming until kickoff)."""
     from datetime import timedelta
     return [g for g in SCHEDULE_2026
-            if d < g.date <= d + timedelta(days=days_ahead)]
+            if d <= g.date <= d + timedelta(days=days_ahead)]
 
 
 def team(code: str) -> Team:
