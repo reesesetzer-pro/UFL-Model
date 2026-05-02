@@ -29,126 +29,9 @@
         "home_team_total": 33.33,
         "away_team_total": 23.71
       },
-      "market": {
-        "home_team": "DC Defenders",
-        "away_team": "Dallas Renegades",
-        "commence_time": "2026-05-02T16:05:28Z",
-        "markets": {
-          "h2h": {
-            "side_a_label": "DC Defenders",
-            "side_b_label": "Dallas Renegades",
-            "consensus_prob_a": 0.7267751385936055,
-            "consensus_prob_b": 0.2732248614063945,
-            "n_books": 5,
-            "books_used": [
-              "draftkings",
-              "williamhill_us",
-              "fanduel",
-              "hardrockbet",
-              "betmgm"
-            ],
-            "consensus_point": null,
-            "best_price_a": {
-              "book": "hardrockbet",
-              "odds": -250.0
-            },
-            "best_price_b": {
-              "book": "draftkings",
-              "odds": 270.0
-            }
-          },
-          "totals": {
-            "side_a_label": "Over",
-            "side_b_label": "Under",
-            "consensus_prob_a": 0.4971024113480952,
-            "consensus_prob_b": 0.502897588651905,
-            "n_books": 5,
-            "books_used": [
-              "draftkings",
-              "williamhill_us",
-              "fanduel",
-              "hardrockbet",
-              "betmgm"
-            ],
-            "consensus_point": 48.9,
-            "best_price_a": {
-              "book": "williamhill_us",
-              "odds": -104.0
-            },
-            "best_price_b": {
-              "book": "fanduel",
-              "odds": -105.0
-            }
-          }
-        }
-      },
+      "market": null,
       "bayes_weight": 0.7,
-      "candidates": [
-        {
-          "label": "DC ML",
-          "market": "moneyline",
-          "side": "home_ml",
-          "p_model": 0.7932,
-          "p_market": 0.7268,
-          "book": "hardrockbet",
-          "american_odds": -250.0,
-          "decimal_odds": 1.4,
-          "edge_prob": 0.0789,
-          "edge_ev": 0.1104,
-          "stake_pct": 0.02,
-          "full_kelly_pct": 0.276,
-          "passes_threshold": true,
-          "reason": ""
-        },
-        {
-          "label": "DAL ML",
-          "market": "moneyline",
-          "side": "away_ml",
-          "p_model": 0.2068,
-          "p_market": 0.2732,
-          "book": "draftkings",
-          "american_odds": 270.0,
-          "decimal_odds": 3.7,
-          "edge_prob": -0.0634,
-          "edge_ev": -0.2347,
-          "stake_pct": 0.0,
-          "full_kelly_pct": -0.0869,
-          "passes_threshold": false,
-          "reason": ""
-        },
-        {
-          "label": "Over 48.9",
-          "market": "total",
-          "side": "over",
-          "p_model": 0.6529,
-          "p_market": 0.4971,
-          "book": "williamhill_us",
-          "american_odds": -104.0,
-          "decimal_odds": 1.9615,
-          "edge_prob": 0.1431,
-          "edge_ev": 0.2806,
-          "stake_pct": 0.02,
-          "full_kelly_pct": 0.2919,
-          "passes_threshold": true,
-          "reason": ""
-        },
-        {
-          "label": "Under 48.9",
-          "market": "total",
-          "side": "under",
-          "p_model": 0.3471,
-          "p_market": 0.5029,
-          "book": "fanduel",
-          "american_odds": -105.0,
-          "decimal_odds": 1.9524,
-          "edge_prob": -0.1651,
-          "edge_ev": -0.3223,
-          "stake_pct": 0.0,
-          "full_kelly_pct": -0.3384,
-          "passes_threshold": false,
-          "reason": ""
-        }
-      ]
+      "candidates": []
     },
     {
       "sb_id": 656663,
@@ -208,8 +91,8 @@
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
-            "consensus_prob_a": 0.4972285435551064,
-            "consensus_prob_b": 0.5027714564448937,
+            "consensus_prob_a": 0.499071868422312,
+            "consensus_prob_b": 0.5009281315776881,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -218,13 +101,13 @@
               "hardrockbet",
               "betmgm"
             ],
-            "consensus_point": 44.5,
+            "consensus_point": 44.6,
             "best_price_a": {
-              "book": "williamhill_us",
-              "odds": -107.0
+              "book": "draftkings",
+              "odds": -108.0
             },
             "best_price_b": {
-              "book": "fanduel",
+              "book": "williamhill_us",
               "odds": -110.0
             }
           }
@@ -265,40 +148,40 @@
           "reason": ""
         },
         {
-          "label": "Over 44.5",
+          "label": "Over 44.6",
           "market": "total",
           "side": "over",
-          "p_model": 0.464,
-          "p_market": 0.4972,
-          "book": "williamhill_us",
-          "american_odds": -107.0,
-          "decimal_odds": 1.9346,
-          "edge_prob": -0.0529,
-          "edge_ev": -0.1023,
+          "p_model": 0.4621,
+          "p_market": 0.4991,
+          "book": "draftkings",
+          "american_odds": -108.0,
+          "decimal_odds": 1.9259,
+          "edge_prob": -0.0571,
+          "edge_ev": -0.1101,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.1095,
+          "full_kelly_pct": -0.1189,
           "passes_threshold": false,
           "reason": ""
         },
         {
-          "label": "Under 44.5",
+          "label": "Under 44.6",
           "market": "total",
           "side": "under",
-          "p_model": 0.536,
-          "p_market": 0.5028,
-          "book": "fanduel",
+          "p_model": 0.5379,
+          "p_market": 0.5009,
+          "book": "williamhill_us",
           "american_odds": -110.0,
           "decimal_odds": 1.9091,
-          "edge_prob": 0.0122,
-          "edge_ev": 0.0233,
-          "stake_pct": 0.0064,
-          "full_kelly_pct": 0.0256,
+          "edge_prob": 0.0141,
+          "edge_ev": 0.0269,
+          "stake_pct": 0.0074,
+          "full_kelly_pct": 0.0296,
           "passes_threshold": false,
           "reason": ""
         }
       ]
     }
   ],
-  "n_candidates_passing": 2,
-  "n_total_candidates": 8
+  "n_candidates_passing": 0,
+  "n_total_candidates": 4
 }
