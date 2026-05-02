@@ -37,9 +37,12 @@ from src.model.elo import (
 from src.model.efficiency import DEFAULT_TOTAL_DRIVES
 
 
-# Initial calibration. Will be re-fit weekly.
+# Calibration. Re-fit weekly off realized residuals.
+# 2026-05-02 (21 games): realized total RMSE=14.7, margin RMSE=10.8.
+# Total sigma left at 14.5 (matches RMSE within noise). Margin tightened from
+# 13.5 -> 11.0 to match realized — was inflating spread/ML probabilities.
 SIGMA_TOTAL: float = 14.5
-SIGMA_MARGIN: float = 13.5
+SIGMA_MARGIN: float = 11.0
 EFFICIENCY_HFA_PPD: float = 0.5    # per-team home boost in PPD space
 ELO_BLEND_WEIGHT: float = 0.5      # weight on Elo vs efficiency spread
 

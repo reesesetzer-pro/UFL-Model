@@ -1,0 +1,63 @@
+name: Daily odds + slate
+
+# Pulls live odds from The Odds API 4 times per day, regenerates the slate
+# JSON, and commits the results so the Streamlit Cloud dashboard updates.
+#
+# Schedule (cron in UTC). All times below are during EDT (UTC-4) which is
+# active March-November — covers the entire UFL season.
+#   13:00 UTC =  9:00 AM ET
+#   16:00 UTC = 12:00 PM ET
+#   20:00 UTC =  4:00 PM ET
+#   00:00 UTC =  8:00 PM ET (previous day's run, fires at midnight UTC)
+
+on:
+  schedule:
+    - cron: '0 13 * * *'
+    - cron: '0 16 * * *'
+    - cron: '0 20 * * *'
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+# Don't let two snapshots collide if one runs long
+concurrency:
+  group: odds-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Pull odds + regenerate slate
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: |
+          python -m src.pipeline.daily_odds_snap
+          python -m src.pipeline.prediction_run --days-ahead 4
+
+      - name: Commit + push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
+          git add data/odds/ data/slates/ data/ratings/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto: odds + slate refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
