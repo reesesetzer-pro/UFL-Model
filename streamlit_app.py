@@ -1,0 +1,273 @@
+"""
+UFL Model dashboard.
+
+Three tabs:
+  1. Slate — upcoming games, model lines, market lines, +EV picks with Kelly
+  2. Team Ratings — Elo + opponent-adjusted PPD over time
+  3. Calibration — model accuracy vs market by week
+
+Run locally:
+    streamlit run streamlit_app.py
+Deploy:
+    Streamlit Community Cloud, point at this repo's main branch.
+"""
+from __future__ import annotations
+import json
+import os
+import sys
+from datetime import date, datetime
+from pathlib import Path
+
+import pandas as pd
+import streamlit as st
+
+# Make src.* imports work when run as `streamlit run streamlit_app.py`
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from src.data.schedule import (
+    SCHEDULE_2026, TEAMS, schedule_by_id, upcoming_games, games_played_through,
+    SEASON_START, SEASON_END, PLAYOFFS_START, CHAMPIONSHIP,
+)
+from src.model.prior_blend import model_weight
+
+# --------------------------------------------------------------------------
+st.set_page_config(page_title="UFL Model", page_icon="🏈", layout="wide")
+
+DATA_DIR = Path("data")
+RATINGS_DIR = DATA_DIR / "ratings"
+SLATE_DIR = DATA_DIR / "slates"
+ODDS_DIR = DATA_DIR / "odds"
+
+
+def _latest(p: Path, suffix: str = ".json") -> Path | None:
+    if not p.exists():
+        return None
+    files = sorted(p.glob(f"*{suffix}"), key=lambda x: x.stat().st_mtime)
+    return files[-1] if files else None
+
+
+@st.cache_data(ttl=300)
+def load_latest_ratings() -> dict | None:
+    p = _latest(RATINGS_DIR)
+    if not p:
+        return None
+    return json.loads(p.read_text())
+
+
+@st.cache_data(ttl=300)
+def load_latest_slate() -> dict | None:
+    p = _latest(SLATE_DIR)
+    if not p:
+        return None
+    return json.loads(p.read_text())
+
+
+@st.cache_data(ttl=120)
+def load_latest_odds() -> pd.DataFrame:
+    p = _latest(ODDS_DIR, suffix=".csv")
+    if not p:
+        return pd.DataFrame()
+    return pd.read_csv(p)
+
+
+# --------------------------------------------------------------------------
+# Header
+
+st.title("🏈 UFL Betting Model")
+
+ratings = load_latest_ratings()
+slate = load_latest_slate()
+odds = load_latest_odds()
+
+c1, c2, c3, c4 = st.columns(4)
+c1.metric("Today",  date.today().isoformat())
+c2.metric("Games played", ratings["n_games"] if ratings else 0)
+c3.metric("Current model weight",
+          f"{model_weight(ratings['n_games'] if ratings else 0)*100:.0f}%")
+c4.metric("Days to championship",
+          (CHAMPIONSHIP - date.today()).days)
+
+if ratings is None:
+    st.warning("No ratings snapshot found. Run `python src/pipeline/weekly_update.py` first.")
+if slate is None:
+    st.info("No slate cached yet. Run `python src/pipeline/prediction_run.py` to generate one.")
+
+st.divider()
+
+# --------------------------------------------------------------------------
+# Tabs
+
+tab_slate, tab_ratings, tab_calib = st.tabs(["📊 Slate", "📈 Team ratings", "🎯 Calibration"])
+
+# ===== Tab 1: Slate ======================================================
+with tab_slate:
+    st.header("Upcoming slate")
+
+    bankroll = st.sidebar.number_input("Bankroll ($)",
+                                        min_value=100.0, value=1000.0, step=100.0)
+    only_passing = st.sidebar.toggle("Only show +EV passing edge threshold", value=True)
+
+    if not slate:
+        st.warning("Run `python src/pipeline/prediction_run.py` to populate.")
+    else:
+        slate_as_of = slate.get("as_of", "?")
+        n_pass = slate.get("n_candidates_passing", 0)
+        n_total = slate.get("n_total_candidates", 0)
+        weight = slate.get("weight_used", 0)
+
+        st.caption(f"Slate generated {slate_as_of} • model weight {weight*100:.0f}% • "
+                   f"{n_pass}/{n_total} candidates passing edge thresholds")
+
+        for g in slate["games"]:
+            with st.container(border=True):
+                top1, top2, top3 = st.columns([2, 2, 3])
+                with top1:
+                    st.subheader(f"{g['away']} @ {g['home']}")
+                    st.caption(f"Week {g['week']} • {g['date']}")
+                with top2:
+                    m = g["model"]
+                    st.markdown(f"**Model:** "
+                                f"{g['home']} {m['spread']:+.2f}, "
+                                f"O/U {m['total']:.1f}")
+                    st.caption(f"Score: {g['home']} {m['home_score']} - {g['away']} {m['away_score']}, "
+                               f"WP {m['home_wp']*100:.1f}%")
+                with top3:
+                    if g.get("market"):
+                        mk = g["market"]["markets"]
+                        parts = []
+                        if "spreads" in mk:
+                            parts.append(f"Spread: {g['home']} {mk['spreads']['consensus_point']:+.1f}")
+                        if "totals" in mk:
+                            parts.append(f"Total: {mk['totals']['consensus_point']:.1f}")
+                        if "h2h" in mk:
+                            parts.append(f"WP cons: {mk['h2h']['consensus_prob_a']*100:.1f}%")
+                        st.markdown("**Market:** " + " | ".join(parts))
+                        st.caption(f"({mk[next(iter(mk))]['n_books']} books)")
+                    else:
+                        st.caption("_No market consensus available_")
+
+                # Derived
+                d = g["derived"]
+                st.caption(
+                    f"📐 Derived: 1H spread {d['h1_spread']:+.2f} • "
+                    f"1H total {d['h1_total']:.1f} • "
+                    f"team totals {g['home']} {d['home_team_total']:.1f} / "
+                    f"{g['away']} {d['away_team_total']:.1f}"
+                )
+
+                cands = g.get("candidates") or []
+                if only_passing:
+                    cands = [c for c in cands if c.get("passes_threshold")]
+                if cands:
+                    rows = []
+                    for c in cands:
+                        rows.append({
+                            "Pick": c["label"],
+                            "Mkt": c["market"],
+                            "Side": c["side"],
+                            "Book": c["book"],
+                            "Odds": c["american_odds"],
+                            "p_model": f"{c['p_model']*100:.1f}%",
+                            "p_market": f"{c['p_market']*100:.1f}%",
+                            "Edge": f"{c['edge_prob']*100:+.2f}pp",
+                            "EV": f"{c['edge_ev']*100:+.1f}%",
+                            "Stake $": round(bankroll * c["stake_pct"], 2),
+                            "Stake %": f"{c['stake_pct']*100:.2f}%",
+                            "✅": "✓" if c["passes_threshold"] else "",
+                        })
+                    df = pd.DataFrame(rows)
+                    st.dataframe(df, use_container_width=True, hide_index=True)
+                elif not only_passing:
+                    st.caption("_No candidates evaluated for this game._")
+                else:
+                    st.caption("_No edges passing threshold._")
+
+# ===== Tab 2: Team Ratings ===============================================
+with tab_ratings:
+    st.header("Team ratings — current snapshot")
+    if not ratings:
+        st.warning("Run `python src/pipeline/weekly_update.py` to populate.")
+    else:
+        rows = []
+        for code, elo_val in ratings["elo"].items():
+            if code.startswith("__"):
+                continue
+            adj = ratings["ppd_adj"].get(code, {"off": 0.0, "def": 0.0, "n": 0})
+            net = adj.get("off", 0) + adj.get("def", 0)  # higher def = better defense
+            rows.append({
+                "Team": code,
+                "Full name": TEAMS[code].full_name,
+                "Elo": round(elo_val, 1),
+                "Games": ratings["elo_games_played"].get(code, 0),
+                "Off PPD adj": round(adj.get("off", 0), 2),
+                "Def PPD adj": round(adj.get("def", 0), 2),
+                "Net PPD": round(net, 2),
+                "Coach": TEAMS[code].head_coach,
+                "Stadium": TEAMS[code].stadium,
+            })
+        df = pd.DataFrame(rows).sort_values("Elo", ascending=False)
+        st.dataframe(df, use_container_width=True, hide_index=True)
+
+        league = ratings["ppd_adj"].get("__league__", {})
+        if league:
+            st.caption(f"League mean PPD: **{league.get('mu_ppd', 0):.2f}** • "
+                       f"HFA (PPD): **{league.get('hfa', 0):+.3f}**")
+
+        st.subheader("Schedule status")
+        today = date.today()
+        completed = games_played_through(today)
+        ahead = upcoming_games(today, days_ahead=14)
+        cA, cB = st.columns(2)
+        with cA:
+            st.markdown(f"**{len(completed)}** games played through today")
+            st.markdown(f"**{len(ahead)}** games in the next 14 days")
+        with cB:
+            st.markdown(f"Season: {SEASON_START} → {SEASON_END}")
+            st.markdown(f"Playoffs start: {PLAYOFFS_START}")
+            st.markdown(f"Championship: {CHAMPIONSHIP} (Audi Field, ABC)")
+
+# ===== Tab 3: Calibration ================================================
+with tab_calib:
+    st.header("Model calibration")
+
+    st.caption(
+        "Per-week model accuracy vs market. Recomputes after each weekly_update run. "
+        "Once we have ~16 games of edge_log data, we can adjust σ_total/σ_margin "
+        "and the elo_blend_weight."
+    )
+
+    # Look for calibration logs (created by predictions runs comparing
+    # closing line vs model + actual outcome)
+    calib_path = DATA_DIR / "calibration.csv"
+    if not calib_path.exists():
+        st.info("No calibration data yet. Will populate after first completed slate "
+                "with model predictions logged.")
+    else:
+        df = pd.read_csv(calib_path)
+        st.dataframe(df, use_container_width=True, hide_index=True)
+
+    st.subheader("Tunables (edit src/model/* to change)")
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.metric("σ_total",  "14.5")
+        st.metric("σ_margin", "13.5")
+    with c2:
+        st.metric("Elo K",        "24.0")
+        st.metric("HFA (Elo)",    "50.0 (~1.5 pts)")
+    with c3:
+        st.metric("Edge threshold (full-game)", "3.0%")
+        st.metric("Edge threshold (derived)",   "5.0%")
+
+    st.divider()
+    st.subheader("Bankroll discipline")
+    st.markdown(
+        """
+- 1/4 Kelly sizing
+- 2% per-bet bankroll cap
+- 0.25% minimum stake (filters noise)
+- Edge in **probability points** (p_model − p_implied), not just EV%
+        """
+    )
+
+st.sidebar.divider()
+st.sidebar.caption(f"UFL Model v0.3 • {date.today()}")
