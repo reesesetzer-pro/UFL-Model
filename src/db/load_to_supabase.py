@@ -27,6 +27,12 @@ from typing import Any, Iterable, Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+except ImportError:
+    pass
+
 from src.data.schedule import schedule_by_id, TEAMS
 
 
@@ -344,13 +350,21 @@ def _play_rows(p: dict) -> list[dict]:
 
 
 def _scoring_rows(p: dict) -> list[dict]:
+    """OT scoring entries from the parser have quarter/clock = None. The schema
+    PK is (sb_id, quarter, clock, team), so we synthesize quarter=5 and a
+    sequence-based clock to keep them unique within a game."""
     rows = []
-    for s in (p.get("scoring_plays") or []):
+    for i, s in enumerate(p.get("scoring_plays") or []):
+        q = s.get("quarter")
+        clock = s.get("clock")
+        if q is None:
+            q = 5
+            clock = f"OT-{i}"
         rows.append({
             "sb_id":   _sb_id(p),
             "team":    s.get("team_abbr"),
-            "quarter": s.get("quarter"),
-            "clock":   s.get("clock"),
+            "quarter": q,
+            "clock":   clock,
             "score_type": s.get("score_type"),
             "points":     _scoring_points(s),
             "pat_type":   s.get("pat_type"),
