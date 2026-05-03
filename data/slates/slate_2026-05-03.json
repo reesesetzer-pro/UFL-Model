@@ -37,8 +37,8 @@
           "h2h": {
             "side_a_label": "Orlando Storm",
             "side_b_label": "Birmingham Stallions",
-            "consensus_prob_a": 0.6633417921783386,
-            "consensus_prob_b": 0.33665820782166167,
+            "consensus_prob_a": 0.6614642157556085,
+            "consensus_prob_b": 0.3385357842443916,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -49,8 +49,8 @@
             ],
             "consensus_point": null,
             "best_price_a": {
-              "book": "williamhill_us",
-              "odds": -209.0
+              "book": "betmgm",
+              "odds": -200.0
             },
             "best_price_b": {
               "book": "draftkings",
@@ -88,31 +88,31 @@
           "label": "ORL ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.7025,
-          "p_market": 0.6633,
-          "book": "williamhill_us",
-          "american_odds": -209.0,
-          "decimal_odds": 1.4785,
-          "edge_prob": 0.0261,
-          "edge_ev": 0.0386,
+          "p_model": 0.7019,
+          "p_market": 0.6615,
+          "book": "betmgm",
+          "american_odds": -200.0,
+          "decimal_odds": 1.5,
+          "edge_prob": 0.0353,
+          "edge_ev": 0.0529,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.0808,
-          "passes_threshold": false,
+          "full_kelly_pct": 0.1058,
+          "passes_threshold": true,
           "reason": ""
         },
         {
           "label": "BHM ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.2975,
-          "p_market": 0.3367,
+          "p_model": 0.2981,
+          "p_market": 0.3385,
           "book": "draftkings",
           "american_odds": 190.0,
           "decimal_odds": 2.9,
-          "edge_prob": -0.0473,
-          "edge_ev": -0.1373,
+          "edge_prob": -0.0468,
+          "edge_ev": -0.1357,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.0723,
+          "full_kelly_pct": -0.0714,
           "passes_threshold": false,
           "reason": ""
         },
@@ -151,6 +151,6 @@
       ]
     }
   ],
-  "n_candidates_passing": 0,
+  "n_candidates_passing": 1,
   "n_total_candidates": 4
 }
