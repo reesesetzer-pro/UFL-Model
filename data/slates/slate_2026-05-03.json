@@ -37,8 +37,8 @@
           "h2h": {
             "side_a_label": "Orlando Storm",
             "side_b_label": "Birmingham Stallions",
-            "consensus_prob_a": 0.7030887098174696,
-            "consensus_prob_b": 0.2969112901825305,
+            "consensus_prob_a": 0.6633417921783386,
+            "consensus_prob_b": 0.33665820782166167,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -49,12 +49,12 @@
             ],
             "consensus_point": null,
             "best_price_a": {
-              "book": "draftkings",
-              "odds": -230.0
+              "book": "williamhill_us",
+              "odds": -209.0
             },
             "best_price_b": {
-              "book": "fanduel",
-              "odds": 230.0
+              "book": "draftkings",
+              "odds": 190.0
             }
           },
           "totals": {
@@ -88,15 +88,15 @@
           "label": "ORL ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.7144,
-          "p_market": 0.7031,
-          "book": "draftkings",
-          "american_odds": -230.0,
-          "decimal_odds": 1.4348,
-          "edge_prob": 0.0175,
-          "edge_ev": 0.0251,
-          "stake_pct": 0.0144,
-          "full_kelly_pct": 0.0576,
+          "p_model": 0.7025,
+          "p_market": 0.6633,
+          "book": "williamhill_us",
+          "american_odds": -209.0,
+          "decimal_odds": 1.4785,
+          "edge_prob": 0.0261,
+          "edge_ev": 0.0386,
+          "stake_pct": 0.02,
+          "full_kelly_pct": 0.0808,
           "passes_threshold": false,
           "reason": ""
         },
@@ -104,15 +104,15 @@
           "label": "BHM ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.2856,
-          "p_market": 0.2969,
-          "book": "fanduel",
-          "american_odds": 230.0,
-          "decimal_odds": 3.3,
-          "edge_prob": -0.0175,
-          "edge_ev": -0.0576,
+          "p_model": 0.2975,
+          "p_market": 0.3367,
+          "book": "draftkings",
+          "american_odds": 190.0,
+          "decimal_odds": 2.9,
+          "edge_prob": -0.0473,
+          "edge_ev": -0.1373,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.0251,
+          "full_kelly_pct": -0.0723,
           "passes_threshold": false,
           "reason": ""
         },
