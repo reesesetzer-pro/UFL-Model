@@ -1,0 +1,16 @@
+game_id,home_team,away_team,commence_time,book,market,last_update,home_price,away_price,over_price,under_price,point
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,draftkings,h2h,2026-05-03T20:38:12Z,180,-238,,,
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,draftkings,spreads,2026-05-03T20:38:12Z,-105,-125,,,4.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,draftkings,totals,2026-05-03T20:38:12Z,,,-110,-120,55.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,williamhill_us,h2h,2026-05-03T20:36:29Z,170,-230,,,
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,williamhill_us,spreads,2026-05-03T20:36:29Z,-109,-120,,,4.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,williamhill_us,totals,2026-05-03T20:36:29Z,,,-120,-110,56.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,fanduel,h2h,2026-05-03T20:39:08Z,160,-220,,,
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,fanduel,spreads,2026-05-03T20:39:08Z,-110,-120,,,4.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,fanduel,totals,2026-05-03T20:39:08Z,,,-110,-120,55.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,hardrockbet,h2h,2026-05-03T20:38:49Z,170,-225,,,
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,hardrockbet,spreads,2026-05-03T20:38:49Z,-110,-120,,,4.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,hardrockbet,totals,2026-05-03T20:38:49Z,,,-110,-120,55.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,betmgm,h2h,2026-05-03T20:39:07Z,180,-250,,,
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,betmgm,spreads,2026-05-03T20:39:07Z,-120,-110,,,5.5
+02714a36987e906d1bc6f35534622794,Orlando Storm,Birmingham Stallions,2026-05-03T20:06:52Z,betmgm,totals,2026-05-03T20:39:07Z,,,-105,-125,57.5
