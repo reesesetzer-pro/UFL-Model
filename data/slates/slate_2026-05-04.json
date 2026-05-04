@@ -37,14 +37,15 @@
           "h2h": {
             "side_a_label": "St. Louis Battlehawks",
             "side_b_label": "Columbus Aviators",
-            "consensus_prob_a": 0.6152305934202682,
-            "consensus_prob_b": 0.3847694065797319,
-            "n_books": 4,
+            "consensus_prob_a": 0.6155031235941536,
+            "consensus_prob_b": 0.3844968764058466,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "hardrockbet",
               "fanduel",
-              "williamhill_us"
+              "williamhill_us",
+              "betmgm"
             ],
             "consensus_point": null,
             "best_price_a": {
@@ -59,14 +60,15 @@
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
-            "consensus_prob_a": 0.5,
-            "consensus_prob_b": 0.5,
-            "n_books": 4,
+            "consensus_prob_a": 0.5000000000000001,
+            "consensus_prob_b": 0.5000000000000001,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "hardrockbet",
               "fanduel",
-              "williamhill_us"
+              "williamhill_us",
+              "betmgm"
             ],
             "consensus_point": 43.5,
             "best_price_a": {
@@ -86,15 +88,15 @@
           "label": "STL ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.6921,
-          "p_market": 0.6152,
+          "p_model": 0.6922,
+          "p_market": 0.6155,
           "book": "fanduel",
           "american_odds": -170.0,
           "decimal_odds": 1.5882,
-          "edge_prob": 0.0625,
-          "edge_ev": 0.0993,
+          "edge_prob": 0.0626,
+          "edge_ev": 0.0994,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.1688,
+          "full_kelly_pct": 0.169,
           "passes_threshold": true,
           "reason": ""
         },
@@ -102,15 +104,15 @@
           "label": "CLB ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.3079,
-          "p_market": 0.3848,
+          "p_model": 0.3078,
+          "p_market": 0.3845,
           "book": "draftkings",
           "american_odds": 145.0,
           "decimal_odds": 2.45,
-          "edge_prob": -0.1003,
-          "edge_ev": -0.2457,
+          "edge_prob": -0.1004,
+          "edge_ev": -0.2459,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.1695,
+          "full_kelly_pct": -0.1696,
           "passes_threshold": false,
           "reason": ""
         },
