@@ -1,0 +1,13 @@
+game_id,home_team,away_team,commence_time,book,market,last_update,home_price,away_price,over_price,under_price,point
+ed0a70fda5df4bae51ce48470a4d972e,St. Louis Battlehawks,Columbus Aviators,2026-05-09T00:00:00Z,draftkings,h2h,2026-05-04T03:53:27Z,-175,145,,,
+ed0a70fda5df4bae51ce48470a4d972e,St. Louis Battlehawks,Columbus Aviators,2026-05-09T00:00:00Z,draftkings,spreads,2026-05-04T03:53:27Z,-120,100,,,-3.0
+ed0a70fda5df4bae51ce48470a4d972e,St. Louis Battlehawks,Columbus Aviators,2026-05-09T00:00:00Z,draftkings,totals,2026-05-04T03:53:27Z,,,-110,-110,43.5
+6885be36b4ba09daa70dab6c0cb6c84e,DC Defenders,Louisville Kings,2026-05-09T17:30:00Z,draftkings,h2h,2026-05-04T03:53:27Z,-625,455,,,
+6885be36b4ba09daa70dab6c0cb6c84e,DC Defenders,Louisville Kings,2026-05-09T17:30:00Z,draftkings,spreads,2026-05-04T03:53:27Z,-110,-110,,,-10.0
+6885be36b4ba09daa70dab6c0cb6c84e,DC Defenders,Louisville Kings,2026-05-09T17:30:00Z,draftkings,totals,2026-05-04T03:53:27Z,,,-110,-110,47.5
+6f2aabea3fd06ec64ea6a1a5f629db36,Birmingham Stallions,Dallas Renegades,2026-05-10T00:00:00Z,draftkings,h2h,2026-05-04T03:53:27Z,110,-130,,,
+6f2aabea3fd06ec64ea6a1a5f629db36,Birmingham Stallions,Dallas Renegades,2026-05-10T00:00:00Z,draftkings,spreads,2026-05-04T03:53:27Z,-105,-115,,,1.5
+6f2aabea3fd06ec64ea6a1a5f629db36,Birmingham Stallions,Dallas Renegades,2026-05-10T00:00:00Z,draftkings,totals,2026-05-04T03:53:27Z,,,-110,-110,45.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,draftkings,h2h,2026-05-04T03:53:27Z,200,-245,,,
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,draftkings,spreads,2026-05-04T03:53:27Z,-110,-110,,,4.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,draftkings,totals,2026-05-04T03:53:27Z,,,-110,-110,45.5

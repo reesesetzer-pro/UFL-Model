@@ -1,0 +1,148 @@
+{
+  "as_of": "2026-05-04",
+  "weight_used": 0.7,
+  "games": [
+    {
+      "sb_id": 656664,
+      "week": 7,
+      "date": "2026-05-08",
+      "home": "STL",
+      "away": "CLB",
+      "model": {
+        "spread": -5.66,
+        "total": 41.63,
+        "home_score": 23.6,
+        "away_score": 18.0,
+        "home_wp": 0.7197,
+        "components": {
+          "elo_diff_inc_hfa": 169.6,
+          "spread_elo": 5.14,
+          "spread_eff": 6.19,
+          "ppd_home": 2.33,
+          "ppd_away": 1.73,
+          "expected_drives_per_team": 10.25
+        }
+      },
+      "derived": {
+        "h1_spread": -3.11,
+        "h1_total": 19.15,
+        "home_team_total": 23.65,
+        "away_team_total": 17.98
+      },
+      "market": {
+        "home_team": "St. Louis Battlehawks",
+        "away_team": "Columbus Aviators",
+        "commence_time": "2026-05-09T00:00:00Z",
+        "markets": {
+          "h2h": {
+            "side_a_label": "St. Louis Battlehawks",
+            "side_b_label": "Columbus Aviators",
+            "consensus_prob_a": 0.6165932442896949,
+            "consensus_prob_b": 0.3834067557103053,
+            "n_books": 1,
+            "books_used": [
+              "draftkings"
+            ],
+            "consensus_point": null,
+            "best_price_a": {
+              "book": "draftkings",
+              "odds": -175.0
+            },
+            "best_price_b": {
+              "book": "draftkings",
+              "odds": 145.0
+            }
+          },
+          "totals": {
+            "side_a_label": "Over",
+            "side_b_label": "Under",
+            "consensus_prob_a": 0.5000000000000001,
+            "consensus_prob_b": 0.5000000000000001,
+            "n_books": 1,
+            "books_used": [
+              "draftkings"
+            ],
+            "consensus_point": 43.5,
+            "best_price_a": {
+              "book": "draftkings",
+              "odds": -110.0
+            },
+            "best_price_b": {
+              "book": "draftkings",
+              "odds": -110.0
+            }
+          }
+        }
+      },
+      "bayes_weight": 0.7,
+      "candidates": [
+        {
+          "label": "STL ML",
+          "market": "moneyline",
+          "side": "home_ml",
+          "p_model": 0.6888,
+          "p_market": 0.6166,
+          "book": "draftkings",
+          "american_odds": -175.0,
+          "decimal_odds": 1.5714,
+          "edge_prob": 0.0524,
+          "edge_ev": 0.0823,
+          "stake_pct": 0.02,
+          "full_kelly_pct": 0.1441,
+          "passes_threshold": true,
+          "reason": ""
+        },
+        {
+          "label": "CLB ML",
+          "market": "moneyline",
+          "side": "away_ml",
+          "p_model": 0.3112,
+          "p_market": 0.3834,
+          "book": "draftkings",
+          "american_odds": 145.0,
+          "decimal_odds": 2.45,
+          "edge_prob": -0.0969,
+          "edge_ev": -0.2375,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.1638,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "Over 43.5",
+          "market": "total",
+          "side": "over",
+          "p_model": 0.464,
+          "p_market": 0.5,
+          "book": "draftkings",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": -0.0598,
+          "edge_ev": -0.1142,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.1256,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "Under 43.5",
+          "market": "total",
+          "side": "under",
+          "p_model": 0.536,
+          "p_market": 0.5,
+          "book": "draftkings",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": 0.0122,
+          "edge_ev": 0.0233,
+          "stake_pct": 0.0064,
+          "full_kelly_pct": 0.0256,
+          "passes_threshold": false,
+          "reason": ""
+        }
+      ]
+    }
+  ],
+  "n_candidates_passing": 1,
+  "n_total_candidates": 4
+}
