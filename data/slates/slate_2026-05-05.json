@@ -37,8 +37,8 @@
           "h2h": {
             "side_a_label": "St. Louis Battlehawks",
             "side_b_label": "Columbus Aviators",
-            "consensus_prob_a": 0.6177045137492143,
-            "consensus_prob_b": 0.38229548625078585,
+            "consensus_prob_a": 0.6373213092889298,
+            "consensus_prob_b": 0.36267869071107045,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -49,12 +49,12 @@
             ],
             "consensus_point": null,
             "best_price_a": {
-              "book": "fanduel",
-              "odds": -170.0
+              "book": "draftkings",
+              "odds": -185.0
             },
             "best_price_b": {
               "book": "betmgm",
-              "odds": 150.0
+              "odds": 165.0
             }
           },
           "totals": {
@@ -88,15 +88,15 @@
           "label": "STL ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.6929,
-          "p_market": 0.6177,
-          "book": "fanduel",
-          "american_odds": -170.0,
-          "decimal_odds": 1.5882,
-          "edge_prob": 0.0633,
-          "edge_ev": 0.1005,
+          "p_model": 0.6988,
+          "p_market": 0.6373,
+          "book": "draftkings",
+          "american_odds": -185.0,
+          "decimal_odds": 1.5405,
+          "edge_prob": 0.0496,
+          "edge_ev": 0.0765,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.1708,
+          "full_kelly_pct": 0.1415,
           "passes_threshold": true,
           "reason": ""
         },
@@ -104,15 +104,15 @@
           "label": "CLB ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.3071,
-          "p_market": 0.3823,
+          "p_model": 0.3012,
+          "p_market": 0.3627,
           "book": "betmgm",
-          "american_odds": 150.0,
-          "decimal_odds": 2.5,
-          "edge_prob": -0.0929,
-          "edge_ev": -0.2322,
+          "american_odds": 165.0,
+          "decimal_odds": 2.65,
+          "edge_prob": -0.0761,
+          "edge_ev": -0.2017,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.1548,
+          "full_kelly_pct": -0.1223,
           "passes_threshold": false,
           "reason": ""
         },
