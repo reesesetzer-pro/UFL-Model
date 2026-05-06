@@ -283,10 +283,50 @@ def build_slate(as_of: Optional[date] = None,
             for code, v in ratings["elo"].items()}
     ppd_adj = {k: v for k, v in ratings["ppd_adj"].items()}
 
+    # ── Weather pull (outdoor stadiums only) ────────────────────────────────
+    # Forecast each upcoming game's kickoff conditions and convert to a
+    # scoring multiplier. Dome games (only STL) get neutral 1.0.
+    from src.data.schedule import STADIUM_COORDS, TEAMS
+    try:
+        # Shared weather util at the repo root
+        sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "scripts"))
+        from weather import fetch_forecast, football_scoring_multiplier
+        _weather_available = True
+    except Exception as e:
+        print(f"[slate] weather util unavailable: {e}")
+        _weather_available = False
+
+    weather_by_sb_id: dict[int, dict] = {}
+    if _weather_available:
+        for slot in upcoming:
+            home_team = TEAMS.get(slot.home)
+            if not home_team or home_team.indoor:
+                weather_by_sb_id[slot.sb_id] = {"mult": 1.0, "summary": "indoor"}
+                continue
+            coords = STADIUM_COORDS.get(slot.home)
+            if not coords:
+                weather_by_sb_id[slot.sb_id] = {"mult": 1.0, "summary": "no coords"}
+                continue
+            kickoff = datetime.combine(slot.date, datetime.min.time()).replace(hour=20)  # default 8pm ET
+            forecast = fetch_forecast(coords[0], coords[1], kickoff)
+            if not forecast:
+                weather_by_sb_id[slot.sb_id] = {"mult": 1.0, "summary": "fetch failed"}
+                continue
+            mult = football_scoring_multiplier(
+                forecast["temp_f"], forecast["wind_mph"], forecast["precip_pct"]
+            )
+            summary = (f"{forecast['temp_f']}°F · {forecast['wind_mph']}mph "
+                       f"{forecast['wind_dir']} · {forecast['precip_pct']}% precip")
+            weather_by_sb_id[slot.sb_id] = {"mult": mult, "summary": summary,
+                                            "raw": forecast}
+        print(f"[slate] weather fetched for {len(weather_by_sb_id)} games")
+
     out_games = []
     candidates: list[BetCandidate] = []
     for slot in upcoming:
-        proj = project_game(slot.home, slot.away, elos, ppd_adj)
+        wx = weather_by_sb_id.get(slot.sb_id, {"mult": 1.0, "summary": ""})
+        proj = project_game(slot.home, slot.away, elos, ppd_adj,
+                            weather_mult=wx["mult"], weather_summary=wx["summary"])
         derived = derive_lines(slot.home, slot.away,
                                model_spread_home=proj.spread,
                                model_total=proj.total)

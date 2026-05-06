@@ -52,6 +52,20 @@ TEAMS: dict[str, Team] = {
                 "America's Center Dome", True, "Ricky Proehl"),
 }
 
+# Stadium coordinates for weather forecasts. STL is the only dome.
+# Lat/lon snapped to within ~100m of each stadium centerpoint.
+STADIUM_COORDS: dict[str, tuple[float, float]] = {
+    "BHM": (33.5290, -86.8113),    # Protective Stadium
+    "CLB": (40.0010, -82.9895),    # Historic Crew Stadium
+    "DAL": (33.1554, -96.8350),    # Toyota Stadium (Frisco, TX)
+    "DC":  (38.8696, -77.0128),    # Audi Field
+    "HOU": (29.7521, -95.3531),    # Shell Energy Stadium (TDECU)
+    "LOU": (38.2601, -85.7449),    # Lynn Family Stadium
+    "ORL": (28.5408, -81.3884),    # Inter&Co Stadium
+    # STL: dome — weather not applicable
+}
+
+
 # Helpful aliases for matching strings out of feeds
 TEAM_ALIASES: dict[str, str] = {
     "Birmingham Stallions": "BHM", "Stallions": "BHM", "BHM": "BHM",

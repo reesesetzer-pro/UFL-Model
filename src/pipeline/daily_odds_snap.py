@@ -72,14 +72,41 @@ def run_snapshot(api_key: str | None = None,
     else:
         print("[odds] no rows flattened (no upcoming games?)")
 
-    # Supabase write — optional, only if SUPABASE_URL and SUPABASE_KEY set
+    # Supabase write — optional, only if SUPABASE_URL and SUPABASE_KEY set.
+    # The flat CSV is wide (home_price / away_price / over_price / under_price);
+    # the `odds_snapshots` schema is narrow (name + price per row). Reshape.
     try:
         from src.db.supabase_client import get_client
         c = get_client()
-        # Each flat row corresponds to a single book+market+side observation
         if flat:
-            c.table("odds_snapshots").insert(flat).execute()
-            print(f"[odds] supabase upserted {len(flat)} rows")
+            snapshot_ts = datetime.now(timezone.utc).isoformat()
+            narrow = []
+            for r in flat:
+                base = {
+                    "snapshot_ts":   snapshot_ts,
+                    "event_id":      r.get("game_id"),
+                    "home_team":     r.get("home_team"),
+                    "away_team":     r.get("away_team"),
+                    "commence_time": r.get("commence_time"),
+                    "market_key":    r.get("market"),
+                    "book":          r.get("book"),
+                    "last_update":   r.get("last_update"),
+                    "point":         r.get("point"),
+                }
+                mk = r.get("market")
+                if mk in ("h2h", "spreads"):
+                    if r.get("home_price") is not None:
+                        narrow.append({**base, "name": r.get("home_team"), "price": r.get("home_price")})
+                    if r.get("away_price") is not None:
+                        narrow.append({**base, "name": r.get("away_team"), "price": r.get("away_price")})
+                elif mk == "totals":
+                    if r.get("over_price") is not None:
+                        narrow.append({**base, "name": "Over",  "price": r.get("over_price")})
+                    if r.get("under_price") is not None:
+                        narrow.append({**base, "name": "Under", "price": r.get("under_price")})
+            if narrow:
+                c.table("odds_snapshots").upsert(narrow, on_conflict="snapshot_ts,event_id,market_key,book,name").execute()
+                print(f"[odds] supabase upserted {len(narrow)} rows")
     except Exception as e:
         print(f"[odds] supabase skipped: {e}")
 

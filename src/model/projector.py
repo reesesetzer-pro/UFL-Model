@@ -74,6 +74,8 @@ def project_game(home: str, away: str,
                  elo_blend_weight: float = ELO_BLEND_WEIGHT,
                  sigma_total: float = SIGMA_TOTAL,
                  sigma_margin: float = SIGMA_MARGIN,
+                 weather_mult: float = 1.0,
+                 weather_summary: Optional[str] = None,
                  ) -> GameProjection:
     """
     home/away: team codes
@@ -114,6 +116,11 @@ def project_game(home: str, away: str,
     spread = elo_blend_weight * spread_elo + (1 - elo_blend_weight) * spread_eff
     total = total_eff  # totals come purely from efficiency; Elo can't say anything about pace
 
+    # Weather adjustment — applied to TOTAL only. Spread is the diff between
+    # team strengths and weather hits both teams symmetrically. Multiplier
+    # comes from `scripts.weather.football_scoring_multiplier()` upstream.
+    total = total * weather_mult
+
     # Recover scores from blended spread + efficiency total
     home_score = (total + spread) / 2.0
     away_score = (total - spread) / 2.0
@@ -142,6 +149,8 @@ def project_game(home: str, away: str,
             "ppd_home": round(ppd_h, 2),
             "ppd_away": round(ppd_a, 2),
             "expected_drives_per_team": round(drives_per_team, 2),
+            "weather_mult": round(weather_mult, 4),
+            "weather": weather_summary or "",
         },
     )
 
