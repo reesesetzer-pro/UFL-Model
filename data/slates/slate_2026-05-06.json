@@ -37,8 +37,8 @@
           "h2h": {
             "side_a_label": "St. Louis Battlehawks",
             "side_b_label": "Columbus Aviators",
-            "consensus_prob_a": 0.6459060179924367,
-            "consensus_prob_b": 0.35409398200756337,
+            "consensus_prob_a": 0.6492848614098399,
+            "consensus_prob_b": 0.3507151385901603,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -53,8 +53,8 @@
               "odds": -190.0
             },
             "best_price_b": {
-              "book": "draftkings",
-              "odds": 170.0
+              "book": "betmgm",
+              "odds": 185.0
             }
           },
           "totals": {
@@ -88,15 +88,15 @@
           "label": "STL ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.7013,
-          "p_market": 0.6459,
+          "p_model": 0.7024,
+          "p_market": 0.6493,
           "book": "fanduel",
           "american_odds": -190.0,
           "decimal_odds": 1.5263,
-          "edge_prob": 0.0462,
-          "edge_ev": 0.0705,
+          "edge_prob": 0.0472,
+          "edge_ev": 0.072,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.1339,
+          "full_kelly_pct": 0.1368,
           "passes_threshold": true,
           "reason": ""
         },
@@ -104,15 +104,15 @@
           "label": "CLB ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.2987,
-          "p_market": 0.3541,
-          "book": "draftkings",
-          "american_odds": 170.0,
-          "decimal_odds": 2.7,
-          "edge_prob": -0.0717,
-          "edge_ev": -0.1936,
+          "p_model": 0.2976,
+          "p_market": 0.3507,
+          "book": "betmgm",
+          "american_odds": 185.0,
+          "decimal_odds": 2.85,
+          "edge_prob": -0.0532,
+          "edge_ev": -0.1517,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.1139,
+          "full_kelly_pct": -0.082,
           "passes_threshold": false,
           "reason": ""
         },
