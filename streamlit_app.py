@@ -102,7 +102,95 @@ st.divider()
 # --------------------------------------------------------------------------
 # Tabs
 
-tab_slate, tab_ratings, tab_calib = st.tabs(["📊 Slate", "📈 Team ratings", "🎯 Calibration"])
+tab_must, tab_slate, tab_ratings, tab_calib = st.tabs([
+    "🎯 MUST TAKE", "📊 Slate", "📈 Team ratings", "🎯 Calibration"])
+
+# ===== Tab 0: MUST TAKE — only +EV passing picks, sorted by EV =============
+with tab_must:
+    st.header("🎯 Must Take")
+    st.caption(
+        "All +EV candidates passing the model's edge threshold for the upcoming "
+        "slate. Sorted by EV, with ¼-Kelly stake suggestions. Tier breakpoints: "
+        "🟢 LOCKS (EV ≥ +6%) · 🟡 STRONG (+3 to +6%) · 🔴 EDGE (passing but lighter)."
+    )
+
+    if not slate or not slate.get("games"):
+        st.warning("No slate cached. Run `python src/pipeline/prediction_run.py` first.")
+    else:
+        # Flatten passing candidates across the whole slate
+        rows = []
+        for g in slate["games"]:
+            for c in (g.get("candidates") or []):
+                if not c.get("passes_threshold"):
+                    continue
+                rows.append({
+                    "game":        f"{g['away']} @ {g['home']}",
+                    "date":        g.get("date", ""),
+                    "label":       c.get("label", ""),
+                    "market":      c.get("market", ""),
+                    "side":        c.get("side", ""),
+                    "book":        c.get("book", ""),
+                    "odds":        c.get("american_odds", 0),
+                    "p_model":     c.get("p_model", 0.0),
+                    "p_market":    c.get("p_market", 0.0),
+                    "edge_prob":   c.get("edge_prob", 0.0),
+                    "edge_ev":     c.get("edge_ev", 0.0),
+                    "stake_pct":   c.get("stake_pct", 0.0),
+                })
+
+        if not rows:
+            st.info("No passing picks on this slate. Sit it out.")
+        else:
+            mt_df = pd.DataFrame(rows).sort_values("edge_ev", ascending=False)
+            bankroll_mt = st.sidebar.number_input(
+                "MUST TAKE bankroll ($)", min_value=100.0, value=1000.0,
+                step=100.0, key="mt_bankroll",
+            )
+
+            # Tier the picks by EV
+            tiers = [
+                ("🟢", "LOCKS",  "EV ≥ +6% — strongest expected value",   0.06,  9.99),
+                ("🟡", "STRONG", "+3 to +6% — solid plays",               0.03,  0.06),
+                ("🔴", "EDGE",   "Passing threshold but lighter EV",      0.00,  0.03),
+            ]
+
+            for emoji, name, desc, lo, hi in tiers:
+                tier_df = mt_df[(mt_df["edge_ev"] >= lo) & (mt_df["edge_ev"] < hi)]
+                if tier_df.empty:
+                    continue
+
+                avg_ev   = tier_df["edge_ev"].mean() * 100
+                stake_total = (tier_df["stake_pct"] * bankroll_mt).sum()
+
+                st.markdown(
+                    f"### {emoji} {name} &nbsp; "
+                    f"<span style='font-size:14px;color:#888;font-weight:400'>"
+                    f"({len(tier_df)} picks · avg EV {avg_ev:+.1f}% · "
+                    f"¼-Kelly total ${stake_total:.0f})</span>",
+                    unsafe_allow_html=True,
+                )
+                st.caption(desc)
+
+                for _, r in tier_df.iterrows():
+                    stake_dollars = r["stake_pct"] * bankroll_mt
+                    odds_str = f"+{r['odds']}" if r['odds'] > 0 else str(r['odds'])
+                    st.markdown(
+                        f"<div style='background:#1A1A2A; border-left:4px solid "
+                        f"{'#00FF88' if lo >= 0.06 else '#FFD700' if lo >= 0.03 else '#FF6B35'};"
+                        f"padding:10px 14px; margin:6px 0; border-radius:6px;'>"
+                        f"<div style='font-size:15px; font-weight:600; color:#E2E2EE;'>"
+                        f"{r['label']}"
+                        f"<span style='font-size:12px; color:#888; font-weight:400'>"
+                        f" — {r['game']} ({r['date']})</span></div>"
+                        f"<div style='font-size:13px; color:#B8B8D4; margin-top:4px;'>"
+                        f"{r['book']} <strong>{odds_str}</strong> &nbsp;·&nbsp; "
+                        f"Model {r['p_model']*100:.1f}% vs Market {r['p_market']*100:.1f}% &nbsp;·&nbsp; "
+                        f"Edge <strong>{r['edge_prob']*100:+.1f}pp</strong> &nbsp;·&nbsp; "
+                        f"EV <strong style='color:#00FF88'>{r['edge_ev']*100:+.1f}%</strong> &nbsp;·&nbsp; "
+                        f"¼-Kelly <strong>${stake_dollars:.0f}</strong>"
+                        f"</div></div>",
+                        unsafe_allow_html=True,
+                    )
 
 # ===== Tab 1: Slate ======================================================
 with tab_slate:
