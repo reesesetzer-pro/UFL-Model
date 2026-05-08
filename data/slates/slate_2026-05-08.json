@@ -39,8 +39,8 @@
           "h2h": {
             "side_a_label": "St. Louis Battlehawks",
             "side_b_label": "Columbus Aviators",
-            "consensus_prob_a": 0.6821339818907026,
-            "consensus_prob_b": 0.3178660181092976,
+            "consensus_prob_a": 0.6958709561199867,
+            "consensus_prob_b": 0.3041290438800134,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -51,12 +51,12 @@
             ],
             "consensus_point": null,
             "best_price_a": {
-              "book": "betmgm",
-              "odds": -220.0
+              "book": "draftkings",
+              "odds": -245.0
             },
             "best_price_b": {
-              "book": "draftkings",
-              "odds": 200.0
+              "book": "fanduel",
+              "odds": 210.0
             }
           },
           "totals": {
@@ -90,15 +90,15 @@
           "label": "STL ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.7122,
-          "p_market": 0.6821,
-          "book": "betmgm",
-          "american_odds": -220.0,
-          "decimal_odds": 1.4545,
-          "edge_prob": 0.0247,
-          "edge_ev": 0.0359,
-          "stake_pct": 0.0198,
-          "full_kelly_pct": 0.0791,
+          "p_model": 0.7163,
+          "p_market": 0.6959,
+          "book": "draftkings",
+          "american_odds": -245.0,
+          "decimal_odds": 1.4082,
+          "edge_prob": 0.0062,
+          "edge_ev": 0.0087,
+          "stake_pct": 0.0053,
+          "full_kelly_pct": 0.0213,
           "passes_threshold": false,
           "reason": ""
         },
@@ -106,15 +106,15 @@
           "label": "CLB ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.2878,
-          "p_market": 0.3179,
-          "book": "draftkings",
-          "american_odds": 200.0,
-          "decimal_odds": 3.0,
-          "edge_prob": -0.0455,
-          "edge_ev": -0.1366,
+          "p_model": 0.2837,
+          "p_market": 0.3041,
+          "book": "fanduel",
+          "american_odds": 210.0,
+          "decimal_odds": 3.1,
+          "edge_prob": -0.0389,
+          "edge_ev": -0.1206,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.0683,
+          "full_kelly_pct": -0.0574,
           "passes_threshold": false,
           "reason": ""
         },
