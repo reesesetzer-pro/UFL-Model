@@ -1,0 +1,16 @@
+game_id,home_team,away_team,commence_time,book,market,last_update,home_price,away_price,over_price,under_price,point
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,draftkings,h2h,2026-05-10T03:58:19Z,164,-198,,,
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,draftkings,spreads,2026-05-10T03:58:19Z,-105,-115,,,3.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,draftkings,totals,2026-05-10T03:58:19Z,,,-108,-112,44.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,hardrockbet,h2h,2026-05-10T03:58:04Z,165,-220,,,
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,hardrockbet,spreads,2026-05-10T03:58:04Z,-105,-125,,,3.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,hardrockbet,totals,2026-05-10T03:58:04Z,,,-115,-115,44.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,fanduel,h2h,2026-05-10T03:57:37Z,165,-195,,,
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,fanduel,spreads,2026-05-10T03:57:37Z,100,-120,,,3.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,fanduel,totals,2026-05-10T03:57:37Z,,,-110,-110,44.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,williamhill_us,h2h,2026-05-10T03:58:21Z,168,-200,,,
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,williamhill_us,spreads,2026-05-10T03:58:21Z,-108,-114,,,3.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,williamhill_us,totals,2026-05-10T03:58:21Z,,,-110,-112,44.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,betmgm,h2h,2026-05-10T03:58:32Z,170,-210,,,
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,betmgm,spreads,2026-05-10T03:58:32Z,-110,-110,,,3.5
+a578dcdf20087bd7c211712c04d6c800,Houston Gamblers,Orlando Storm,2026-05-10T22:00:00Z,betmgm,totals,2026-05-10T03:58:32Z,,,-115,-105,44.5
