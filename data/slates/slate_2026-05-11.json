@@ -39,13 +39,15 @@
           "h2h": {
             "side_a_label": "Dallas Renegades",
             "side_b_label": "Orlando Storm",
-            "consensus_prob_a": 0.5244981035355258,
-            "consensus_prob_b": 0.4755018964644743,
-            "n_books": 3,
+            "consensus_prob_a": 0.5244833743204298,
+            "consensus_prob_b": 0.47551662567957037,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "hardrockbet",
-              "fanduel"
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": null,
             "best_price_a": {
@@ -62,11 +64,13 @@
             "side_b_label": "Under",
             "consensus_prob_a": 0.5000000000000001,
             "consensus_prob_b": 0.5000000000000001,
-            "n_books": 3,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "hardrockbet",
-              "fanduel"
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": 45.5,
             "best_price_a": {
