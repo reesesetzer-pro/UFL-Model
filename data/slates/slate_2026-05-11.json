@@ -39,16 +39,18 @@
           "h2h": {
             "side_a_label": "Dallas Renegades",
             "side_b_label": "Orlando Storm",
-            "consensus_prob_a": 0.5278394447975963,
-            "consensus_prob_b": 0.47216055520240385,
-            "n_books": 1,
+            "consensus_prob_a": 0.5244981035355258,
+            "consensus_prob_b": 0.4755018964644743,
+            "n_books": 3,
             "books_used": [
-              "draftkings"
+              "draftkings",
+              "hardrockbet",
+              "fanduel"
             ],
             "consensus_point": null,
             "best_price_a": {
-              "book": "draftkings",
-              "odds": -122.0
+              "book": "fanduel",
+              "odds": -120.0
             },
             "best_price_b": {
               "book": "draftkings",
@@ -60,9 +62,11 @@
             "side_b_label": "Under",
             "consensus_prob_a": 0.5000000000000001,
             "consensus_prob_b": 0.5000000000000001,
-            "n_books": 1,
+            "n_books": 3,
             "books_used": [
-              "draftkings"
+              "draftkings",
+              "hardrockbet",
+              "fanduel"
             ],
             "consensus_point": 45.5,
             "best_price_a": {
@@ -82,15 +86,15 @@
           "label": "DAL ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.4186,
-          "p_market": 0.5278,
-          "book": "draftkings",
-          "american_odds": -122.0,
-          "decimal_odds": 1.8197,
-          "edge_prob": -0.1309,
-          "edge_ev": -0.2383,
+          "p_model": 0.4176,
+          "p_market": 0.5245,
+          "book": "fanduel",
+          "american_odds": -120.0,
+          "decimal_odds": 1.8333,
+          "edge_prob": -0.1278,
+          "edge_ev": -0.2344,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.2907,
+          "full_kelly_pct": -0.2813,
           "passes_threshold": false,
           "reason": ""
         },
@@ -98,15 +102,15 @@
           "label": "ORL ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.5814,
-          "p_market": 0.4722,
+          "p_model": 0.5824,
+          "p_market": 0.4755,
           "book": "draftkings",
           "american_odds": 102.0,
           "decimal_odds": 2.02,
-          "edge_prob": 0.0863,
-          "edge_ev": 0.1744,
+          "edge_prob": 0.0873,
+          "edge_ev": 0.1764,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.171,
+          "full_kelly_pct": 0.173,
           "passes_threshold": true,
           "reason": ""
         },
