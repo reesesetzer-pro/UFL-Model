@@ -39,8 +39,8 @@
           "h2h": {
             "side_a_label": "Dallas Renegades",
             "side_b_label": "Orlando Storm",
-            "consensus_prob_a": 0.5244833743204298,
-            "consensus_prob_b": 0.47551662567957037,
+            "consensus_prob_a": 0.52675481057663,
+            "consensus_prob_b": 0.47324518942337024,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -55,8 +55,8 @@
               "odds": -120.0
             },
             "best_price_b": {
-              "book": "draftkings",
-              "odds": 102.0
+              "book": "betmgm",
+              "odds": 105.0
             }
           },
           "totals": {
@@ -90,15 +90,15 @@
           "label": "DAL ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.4176,
-          "p_market": 0.5245,
+          "p_model": 0.4183,
+          "p_market": 0.5268,
           "book": "fanduel",
           "american_odds": -120.0,
           "decimal_odds": 1.8333,
-          "edge_prob": -0.1278,
-          "edge_ev": -0.2344,
+          "edge_prob": -0.1272,
+          "edge_ev": -0.2331,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.2813,
+          "full_kelly_pct": -0.2798,
           "passes_threshold": false,
           "reason": ""
         },
@@ -106,15 +106,15 @@
           "label": "ORL ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.5824,
-          "p_market": 0.4755,
-          "book": "draftkings",
-          "american_odds": 102.0,
-          "decimal_odds": 2.02,
-          "edge_prob": 0.0873,
-          "edge_ev": 0.1764,
+          "p_model": 0.5817,
+          "p_market": 0.4732,
+          "book": "betmgm",
+          "american_odds": 105.0,
+          "decimal_odds": 2.05,
+          "edge_prob": 0.0939,
+          "edge_ev": 0.1925,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.173,
+          "full_kelly_pct": 0.1833,
           "passes_threshold": true,
           "reason": ""
         },
