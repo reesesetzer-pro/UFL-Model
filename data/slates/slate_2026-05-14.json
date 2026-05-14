@@ -212,8 +212,8 @@
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
-            "consensus_prob_a": 0.5032424281092922,
-            "consensus_prob_b": 0.49675757189070796,
+            "consensus_prob_a": 0.5037032749604078,
+            "consensus_prob_b": 0.4962967250395923,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -273,7 +273,7 @@
           "market": "total",
           "side": "over",
           "p_model": 0.5209,
-          "p_market": 0.5032,
+          "p_market": 0.5037,
           "book": "fanduel",
           "american_odds": -110.0,
           "decimal_odds": 1.9091,
@@ -289,7 +289,7 @@
           "market": "total",
           "side": "under",
           "p_model": 0.4791,
-          "p_market": 0.4968,
+          "p_market": 0.4963,
           "book": "draftkings",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
@@ -362,8 +362,8 @@
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
-            "consensus_prob_a": 0.5045907438494466,
-            "consensus_prob_b": 0.49540925615055365,
+            "consensus_prob_a": 0.5034541379554331,
+            "consensus_prob_b": 0.49654586204456697,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -379,7 +379,7 @@
             },
             "best_price_b": {
               "book": "williamhill_us",
-              "odds": -104.0
+              "odds": -106.0
             }
           }
         }
@@ -423,7 +423,7 @@
           "market": "total",
           "side": "over",
           "p_model": 0.3845,
-          "p_market": 0.5046,
+          "p_market": 0.5035,
           "book": "fanduel",
           "american_odds": -110.0,
           "decimal_odds": 1.9091,
@@ -439,14 +439,14 @@
           "market": "total",
           "side": "under",
           "p_model": 0.6155,
-          "p_market": 0.4954,
+          "p_market": 0.4965,
           "book": "williamhill_us",
-          "american_odds": -104.0,
-          "decimal_odds": 1.9615,
-          "edge_prob": 0.1057,
-          "edge_ev": 0.2074,
+          "american_odds": -106.0,
+          "decimal_odds": 1.9434,
+          "edge_prob": 0.101,
+          "edge_ev": 0.1962,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.2157,
+          "full_kelly_pct": 0.208,
           "passes_threshold": true,
           "reason": ""
         }
@@ -512,8 +512,8 @@
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
-            "consensus_prob_a": 0.5083242164399675,
-            "consensus_prob_b": 0.49167578356003255,
+            "consensus_prob_a": 0.5050923473445361,
+            "consensus_prob_b": 0.494907652655464,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -528,8 +528,8 @@
               "odds": -110.0
             },
             "best_price_b": {
-              "book": "williamhill_us",
-              "odds": 100.0
+              "book": "betmgm",
+              "odds": -105.0
             }
           }
         }
@@ -573,7 +573,7 @@
           "market": "total",
           "side": "over",
           "p_model": 0.5415,
-          "p_market": 0.5083,
+          "p_market": 0.5051,
           "book": "fanduel",
           "american_odds": -110.0,
           "decimal_odds": 1.9091,
@@ -589,14 +589,14 @@
           "market": "total",
           "side": "under",
           "p_model": 0.4585,
-          "p_market": 0.4917,
-          "book": "williamhill_us",
-          "american_odds": 100.0,
-          "decimal_odds": 2.0,
-          "edge_prob": -0.0415,
-          "edge_ev": -0.0829,
+          "p_market": 0.4949,
+          "book": "betmgm",
+          "american_odds": -105.0,
+          "decimal_odds": 1.9524,
+          "edge_prob": -0.0537,
+          "edge_ev": -0.1048,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.0829,
+          "full_kelly_pct": -0.11,
           "passes_threshold": false,
           "reason": ""
         }
