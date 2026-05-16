@@ -1,0 +1,43 @@
+game_id,home_team,away_team,commence_time,book,market,last_update,home_price,away_price,over_price,under_price,point
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,hardrockbet,h2h,2026-05-16T16:55:27Z,160,-220,,,
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,hardrockbet,spreads,2026-05-16T16:55:27Z,-110,-120,,,3.5
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,hardrockbet,totals,2026-05-16T16:55:27Z,,,-120,-110,58.5
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,fanduel,h2h,2026-05-16T16:56:32Z,160,-220,,,
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,fanduel,spreads,2026-05-16T16:56:32Z,-110,-120,,,3.5
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,fanduel,totals,2026-05-16T16:56:32Z,,,-120,-110,58.5
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,betmgm,h2h,2026-05-16T16:56:09Z,145,-200,,,
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,betmgm,spreads,2026-05-16T16:56:09Z,-125,-105,,,4.5
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,betmgm,totals,2026-05-16T16:56:09Z,,,-115,-115,58.5
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,williamhill_us,h2h,2026-05-16T16:55:50Z,164,-218,,,
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,williamhill_us,spreads,2026-05-16T16:55:50Z,-108,-121,,,3.5
+04f80b4ba519e3a05732936fceeb250a,Louisville Kings,DC Defenders,2026-05-16T16:30:00Z,williamhill_us,totals,2026-05-16T16:55:50Z,,,-113,-115,58.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,draftkings,h2h,2026-05-16T16:56:32Z,-375,295,,,
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,draftkings,spreads,2026-05-16T16:56:32Z,-102,-118,,,-7.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,draftkings,totals,2026-05-16T16:56:32Z,,,-112,-108,45.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,hardrockbet,h2h,2026-05-16T16:56:31Z,-400,260,,,
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,hardrockbet,spreads,2026-05-16T16:56:31Z,-105,-125,,,-7.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,hardrockbet,totals,2026-05-16T16:56:31Z,,,-115,-115,44.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,fanduel,h2h,2026-05-16T16:56:32Z,-370,300,,,
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,fanduel,spreads,2026-05-16T16:56:32Z,100,-120,,,-7.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,fanduel,totals,2026-05-16T16:56:32Z,,,-110,-110,44.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,betmgm,h2h,2026-05-16T16:56:09Z,-375,300,,,
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,betmgm,spreads,2026-05-16T16:56:09Z,-110,-110,,,-7.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,betmgm,totals,2026-05-16T16:56:09Z,,,-115,-105,44.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,williamhill_us,h2h,2026-05-16T16:55:50Z,-380,290,,,
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,williamhill_us,spreads,2026-05-16T16:55:50Z,-104,-120,,,-7.5
+654ef498ad97d6e897f9fbc9bbd9d1f0,St. Louis Battlehawks,Houston Gamblers,2026-05-16T19:00:00Z,williamhill_us,totals,2026-05-16T16:55:50Z,,,-117,-106,44.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,draftkings,h2h,2026-05-16T16:56:32Z,-135,114,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,draftkings,spreads,2026-05-16T16:56:32Z,-110,-110,,,-2.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,draftkings,totals,2026-05-16T16:56:32Z,,,-110,-110,45.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,hardrockbet,h2h,2026-05-16T16:56:31Z,-140,110,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,hardrockbet,spreads,2026-05-16T16:56:31Z,-115,-115,,,-1.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,hardrockbet,totals,2026-05-16T16:56:31Z,,,-115,-115,45.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,fanduel,h2h,2026-05-16T16:56:32Z,-135,115,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,fanduel,spreads,2026-05-16T16:56:32Z,-110,-110,,,-1.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,fanduel,totals,2026-05-16T16:56:32Z,,,-110,-110,45.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,betmgm,h2h,2026-05-16T16:56:09Z,-135,115,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,betmgm,spreads,2026-05-16T16:56:09Z,-110,-110,,,-2.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,betmgm,totals,2026-05-16T16:56:09Z,,,-115,-105,45.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,williamhill_us,h2h,2026-05-16T16:55:50Z,-150,128,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,williamhill_us,spreads,2026-05-16T16:55:50Z,-107,-115,,,-2.0
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,williamhill_us,totals,2026-05-16T16:55:50Z,,,-110,-110,46.0
