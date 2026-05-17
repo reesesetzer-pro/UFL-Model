@@ -1,0 +1,158 @@
+{
+  "as_of": "2026-05-17",
+  "weight_used": 0.7,
+  "games": [
+    {
+      "sb_id": 656671,
+      "week": 8,
+      "date": "2026-05-17",
+      "home": "BHM",
+      "away": "CLB",
+      "model": {
+        "spread": -1.5,
+        "total": 47.86,
+        "home_score": 24.7,
+        "away_score": 23.2,
+        "home_wp": 0.5603,
+        "components": {
+          "elo_diff_inc_hfa": 35.4,
+          "spread_elo": 1.07,
+          "spread_eff": 1.94,
+          "ppd_home": 2.43,
+          "ppd_away": 2.24,
+          "expected_drives_per_team": 10.25,
+          "weather_mult": 1.0,
+          "weather": ""
+        }
+      },
+      "derived": {
+        "h1_spread": -0.83,
+        "h1_total": 22.02,
+        "home_team_total": 24.68,
+        "away_team_total": 23.18
+      },
+      "market": {
+        "home_team": "Birmingham Stallions",
+        "away_team": "Columbus Aviators",
+        "commence_time": "2026-05-17T17:00:00Z",
+        "markets": {
+          "h2h": {
+            "side_a_label": "Birmingham Stallions",
+            "side_b_label": "Columbus Aviators",
+            "consensus_prob_a": 0.5606950568470815,
+            "consensus_prob_b": 0.4393049431529185,
+            "n_books": 5,
+            "books_used": [
+              "draftkings",
+              "hardrockbet",
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
+            ],
+            "consensus_point": null,
+            "best_price_a": {
+              "book": "draftkings",
+              "odds": -135.0
+            },
+            "best_price_b": {
+              "book": "williamhill_us",
+              "odds": 128.0
+            }
+          },
+          "totals": {
+            "side_a_label": "Over",
+            "side_b_label": "Under",
+            "consensus_prob_a": 0.5023208908996425,
+            "consensus_prob_b": 0.4976791091003577,
+            "n_books": 5,
+            "books_used": [
+              "draftkings",
+              "hardrockbet",
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
+            ],
+            "consensus_point": 45.6,
+            "best_price_a": {
+              "book": "draftkings",
+              "odds": -110.0
+            },
+            "best_price_b": {
+              "book": "betmgm",
+              "odds": -105.0
+            }
+          }
+        }
+      },
+      "bayes_weight": 0.7,
+      "candidates": [
+        {
+          "label": "BHM ML",
+          "market": "moneyline",
+          "side": "home_ml",
+          "p_model": 0.5604,
+          "p_market": 0.5607,
+          "book": "draftkings",
+          "american_odds": -135.0,
+          "decimal_odds": 1.7407,
+          "edge_prob": -0.014,
+          "edge_ev": -0.0245,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.033,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "CLB ML",
+          "market": "moneyline",
+          "side": "away_ml",
+          "p_model": 0.4396,
+          "p_market": 0.4393,
+          "book": "williamhill_us",
+          "american_odds": 128.0,
+          "decimal_odds": 2.28,
+          "edge_prob": 0.001,
+          "edge_ev": 0.0022,
+          "stake_pct": 0.0,
+          "full_kelly_pct": 0.0018,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "Over 45.6",
+          "market": "total",
+          "side": "over",
+          "p_model": 0.5434,
+          "p_market": 0.5023,
+          "book": "draftkings",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": 0.0196,
+          "edge_ev": 0.0374,
+          "stake_pct": 0.0103,
+          "full_kelly_pct": 0.0411,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "Under 45.6",
+          "market": "total",
+          "side": "under",
+          "p_model": 0.4566,
+          "p_market": 0.4977,
+          "book": "betmgm",
+          "american_odds": -105.0,
+          "decimal_odds": 1.9524,
+          "edge_prob": -0.0556,
+          "edge_ev": -0.1085,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.1139,
+          "passes_threshold": false,
+          "reason": ""
+        }
+      ]
+    }
+  ],
+  "n_candidates_passing": 0,
+  "n_total_candidates": 4
+}
