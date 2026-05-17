@@ -1,0 +1,16 @@
+game_id,home_team,away_team,commence_time,book,market,last_update,home_price,away_price,over_price,under_price,point
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,draftkings,h2h,2026-05-17T14:18:10Z,-135,114,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,draftkings,spreads,2026-05-17T14:18:10Z,-110,-110,,,-2.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,draftkings,totals,2026-05-17T14:18:10Z,,,-110,-110,45.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,hardrockbet,h2h,2026-05-17T14:17:51Z,-140,110,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,hardrockbet,spreads,2026-05-17T14:17:51Z,-115,-115,,,-2.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,hardrockbet,totals,2026-05-17T14:17:51Z,,,-115,-115,45.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,fanduel,h2h,2026-05-17T14:18:27Z,-135,115,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,fanduel,spreads,2026-05-17T14:18:27Z,-110,-110,,,-2.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,fanduel,totals,2026-05-17T14:18:27Z,,,-110,-110,45.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,betmgm,h2h,2026-05-17T14:18:28Z,-135,115,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,betmgm,spreads,2026-05-17T14:18:28Z,-110,-110,,,-2.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,betmgm,totals,2026-05-17T14:18:28Z,,,-115,-105,45.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,williamhill_us,h2h,2026-05-17T14:17:04Z,-150,128,,,
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,williamhill_us,spreads,2026-05-17T14:17:04Z,-103,-120,,,-2.5
+46166ebf1f9f75c939954633e130dce8,Birmingham Stallions,Columbus Aviators,2026-05-17T17:00:00Z,williamhill_us,totals,2026-05-17T14:17:04Z,,,-110,-110,46.0

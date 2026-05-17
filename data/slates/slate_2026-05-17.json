@@ -59,6 +59,29 @@
               "odds": 128.0
             }
           },
+          "spreads": {
+            "side_a_label": "Birmingham Stallions",
+            "side_b_label": "Columbus Aviators",
+            "consensus_prob_a": 0.49609432718316865,
+            "consensus_prob_b": 0.5039056728168315,
+            "n_books": 5,
+            "books_used": [
+              "draftkings",
+              "hardrockbet",
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
+            ],
+            "consensus_point": -2.5,
+            "best_price_a": {
+              "book": "williamhill_us",
+              "odds": -103.0
+            },
+            "best_price_b": {
+              "book": "draftkings",
+              "odds": -110.0
+            }
+          },
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
@@ -119,6 +142,38 @@
           "reason": ""
         },
         {
+          "label": "BHM -2.5",
+          "market": "spread",
+          "side": "home_spread",
+          "p_model": 0.4746,
+          "p_market": 0.4961,
+          "book": "williamhill_us",
+          "american_odds": -103.0,
+          "decimal_odds": 1.9709,
+          "edge_prob": -0.0328,
+          "edge_ev": -0.0646,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.0665,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "CLB +2.5",
+          "market": "spread",
+          "side": "away_spread",
+          "p_model": 0.5254,
+          "p_market": 0.5039,
+          "book": "draftkings",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": 0.0016,
+          "edge_ev": 0.003,
+          "stake_pct": 0.0,
+          "full_kelly_pct": 0.0033,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
           "label": "Over 45.6",
           "market": "total",
           "side": "over",
@@ -154,5 +209,5 @@
     }
   ],
   "n_candidates_passing": 0,
-  "n_total_candidates": 4
+  "n_total_candidates": 6
 }
