@@ -121,14 +121,17 @@ def _expand_wide_odds(rows: list[dict]) -> list[dict]:
             if r.get("away_price") not in (None, ""):
                 long_rows.append({**common, "name": r["away_team"], "price": r["away_price"], "point": None})
         elif market == "spreads":
+            # Both sides share the SAME point so build_market_consensus can
+            # pair them in by_book_point groups. The "which team gets which
+            # spread" is determined by the side name; the point itself is the
+            # home-side spread (negative = home favorite).
+            # Previously: away point was negated, which split the group and
+            # left both sides with no pair — spreads never made it to the
+            # consensus dict, model never generated a spread pick.
             if r.get("home_price") not in (None, ""):
                 long_rows.append({**common, "name": r["home_team"], "price": r["home_price"], "point": point})
             if r.get("away_price") not in (None, ""):
-                try:
-                    away_pt = -float(point) if point not in (None, "") else None
-                except (TypeError, ValueError):
-                    away_pt = None
-                long_rows.append({**common, "name": r["away_team"], "price": r["away_price"], "point": away_pt})
+                long_rows.append({**common, "name": r["away_team"], "price": r["away_price"], "point": point})
         elif market == "totals":
             if r.get("over_price") not in (None, ""):
                 long_rows.append({**common, "name": "Over", "price": r["over_price"], "point": point})
