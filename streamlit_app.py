@@ -197,11 +197,33 @@ with tab_must:
     if not slate or not slate.get("games"):
         st.warning("No slate cached. Run `python src/pipeline/prediction_run.py` first.")
     else:
+        # Sample-size gate: only surface picks in markets that have ≥20 settled
+        # bets in the live track record. New markets with thin samples can show
+        # in the Slate tab; they just don't qualify as MUST TAKE yet.
+        MIN_MARKET_N = 20
+        _proven_markets = {
+            mkt for mkt, s in _ufl_roi.items()
+            if (s.get("w", 0) + s.get("l", 0)) >= MIN_MARKET_N
+        }
+
         # Flatten passing candidates across the whole slate
         rows = []
+        skipped_thin = 0
         for g in slate["games"]:
             for c in (g.get("candidates") or []):
                 if not c.get("passes_threshold"):
+                    continue
+                # Normalize market name to match _ufl_roi keys
+                # candidates use "h2h"/"spreads"/"totals", roi map uses
+                # "moneyline"/"spread"/"total"
+                mkt_raw = c.get("market", "")
+                mkt_key = {
+                    "h2h": "moneyline",
+                    "spreads": "spread",
+                    "totals": "total",
+                }.get(mkt_raw, mkt_raw)
+                if _proven_markets and mkt_key not in _proven_markets:
+                    skipped_thin += 1
                     continue
                 rows.append({
                     "game":        f"{g['away']} @ {g['home']}",
@@ -217,6 +239,13 @@ with tab_must:
                     "edge_ev":     c.get("edge_ev", 0.0),
                     "stake_pct":   c.get("stake_pct", 0.0),
                 })
+
+        if skipped_thin:
+            st.caption(
+                f"🚧 {skipped_thin} candidate(s) hidden — markets with fewer "
+                f"than {MIN_MARKET_N} settled picks are too thin to call yet. "
+                f"They'll auto-surface as the sample grows."
+            )
 
         if not rows:
             st.info("No passing picks on this slate. Sit it out.")
