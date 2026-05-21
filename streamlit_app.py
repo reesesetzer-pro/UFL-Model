@@ -45,26 +45,47 @@ ODDS_DIR = DATA_DIR / "odds"
 
 
 def _latest(p: Path, suffix: str = ".json") -> Path | None:
+    """Most-recent file by FILENAME — filenames encode the date
+    (e.g. slate_2026-05-21.json). mtime-based sort broke when a rebase
+    touched every file with identical timestamps."""
     if not p.exists():
         return None
-    files = sorted(p.glob(f"*{suffix}"), key=lambda x: x.stat().st_mtime)
+    files = sorted(p.glob(f"*{suffix}"), key=lambda x: x.name)
     return files[-1] if files else None
+
+
+def _safe_load_json(p: Path):
+    """Load JSON defensively — skip files with merge-conflict markers or other
+    corruption. Returns None on failure so callers can try the next-newest."""
+    try:
+        text = p.read_text()
+        if "<<<<<<<" in text or ">>>>>>>" in text:
+            return None
+        return json.loads(text)
+    except (json.JSONDecodeError, ValueError):
+        return None
 
 
 @st.cache_data(ttl=300)
 def load_latest_ratings() -> dict | None:
-    p = _latest(RATINGS_DIR)
-    if not p:
+    if not RATINGS_DIR.exists():
         return None
-    return json.loads(p.read_text())
+    for f in sorted(RATINGS_DIR.glob("*.json"), key=lambda x: x.name, reverse=True):
+        d = _safe_load_json(f)
+        if d is not None:
+            return d
+    return None
 
 
 @st.cache_data(ttl=300)
 def load_latest_slate() -> dict | None:
-    p = _latest(SLATE_DIR)
-    if not p:
+    if not SLATE_DIR.exists():
         return None
-    return json.loads(p.read_text())
+    for f in sorted(SLATE_DIR.glob("*.json"), key=lambda x: x.name, reverse=True):
+        d = _safe_load_json(f)
+        if d is not None:
+            return d
+    return None
 
 
 @st.cache_data(ttl=120)
