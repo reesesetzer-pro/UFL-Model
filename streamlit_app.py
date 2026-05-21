@@ -114,6 +114,65 @@ with tab_must:
         "🟢 LOCKS (EV ≥ +6%) · 🟡 STRONG (+3 to +6%) · 🔴 EDGE (passing but lighter)."
     )
 
+    # ── Live track record from graded_bets.csv ──────────────────────────────
+    # Renders a top banner with current ROI per market (moneyline/spread/total)
+    # so the user sees fresh truth instead of stale hardcoded labels. Refresh
+    # every 5 min — auto-updates as new picks grade.
+    @st.cache_data(ttl=300, show_spinner=False)
+    def _ufl_market_roi():
+        import csv
+        from pathlib import Path
+        path = Path("data/graded_bets.csv")
+        if not path.exists():
+            return {}
+        rows = list(csv.DictReader(path.open()))
+        out = {}
+        for mkt in ("moneyline", "spread", "total"):
+            g = [r for r in rows if r.get("market") == mkt and r.get("result") in ("WIN","LOSS","PUSH")]
+            if not g: continue
+            w = sum(1 for r in g if r["result"] == "WIN")
+            l = sum(1 for r in g if r["result"] == "LOSS")
+            p = sum(1 for r in g if r["result"] == "PUSH")
+            n_dec = w + l
+            pnl = sum(float(r.get("pnl") or 0) for r in g)
+            out[mkt] = {"w": w, "l": l, "p": p,
+                        "win_pct": (w/n_dec*100) if n_dec else 0,
+                        "roi": (pnl/n_dec*100) if n_dec else 0}
+        return out
+
+    _ufl_roi = _ufl_market_roi()
+    if _ufl_roi:
+        cards = []
+        for mkt, s in sorted(_ufl_roi.items(), key=lambda kv: -kv[1]["roi"]):
+            label = {"moneyline":"💰 Moneyline", "spread":"📈 Spread", "total":"🎯 Total"}.get(mkt, mkt)
+            roi_pct = s["roi"]
+            if roi_pct >= 50:   bg, accent = "#0a4a2a", "#69f0ae"
+            elif roi_pct >= 0:  bg, accent = "#2a2a3a", "#ccc"
+            else:               bg, accent = "#4a1a1a", "#ff6b35"
+            cards.append(f"""
+                <div style="background:{bg};padding:14px 18px;border-radius:10px;
+                            border-left:4px solid {accent};flex:1;min-width:180px;">
+                    <div style="font-size:11px;color:#aaa;letter-spacing:1.5px;font-weight:600;">{label}</div>
+                    <div style="font-size:24px;color:{accent};font-weight:700;
+                                font-family:'Space Mono',monospace;margin:4px 0;">
+                        {roi_pct:+.1f}%
+                    </div>
+                    <div style="font-size:11px;color:#ccc;">
+                        {s['win_pct']:.0f}% W &middot; {s['w']}-{s['l']}-{s['p']} lifetime
+                    </div>
+                </div>
+            """)
+        st.markdown(f"""
+            <div style="margin:6px 0 18px 0;">
+                <div style="font-size:11px;color:#888;letter-spacing:2px;font-weight:600;margin-bottom:8px;">
+                    LIVE TRACK RECORD — UPDATED AFTER EVERY GRADE RUN
+                </div>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                    {''.join(cards)}
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
     if not slate or not slate.get("games"):
         st.warning("No slate cached. Run `python src/pipeline/prediction_run.py` first.")
     else:
