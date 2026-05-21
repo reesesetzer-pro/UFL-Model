@@ -149,29 +149,29 @@ with tab_must:
             if roi_pct >= 50:   bg, accent = "#0a4a2a", "#69f0ae"
             elif roi_pct >= 0:  bg, accent = "#2a2a3a", "#ccc"
             else:               bg, accent = "#4a1a1a", "#ff6b35"
-            cards.append(f"""
-                <div style="background:{bg};padding:14px 18px;border-radius:10px;
-                            border-left:4px solid {accent};flex:1;min-width:180px;">
-                    <div style="font-size:11px;color:#aaa;letter-spacing:1.5px;font-weight:600;">{label}</div>
-                    <div style="font-size:24px;color:{accent};font-weight:700;
-                                font-family:'Space Mono',monospace;margin:4px 0;">
-                        {roi_pct:+.1f}%
-                    </div>
-                    <div style="font-size:11px;color:#ccc;">
-                        {s['win_pct']:.0f}% W &middot; {s['w']}-{s['l']}-{s['p']} lifetime
-                    </div>
-                </div>
-            """)
-        st.markdown(f"""
-            <div style="margin:6px 0 18px 0;">
-                <div style="font-size:11px;color:#888;letter-spacing:2px;font-weight:600;margin-bottom:8px;">
-                    LIVE TRACK RECORD — UPDATED AFTER EVERY GRADE RUN
-                </div>
-                <div style="display:flex;gap:10px;flex-wrap:wrap;">
-                    {''.join(cards)}
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
+            # NOTE: no leading indent on the HTML — Streamlit markdown treats
+            # 4+ leading spaces as a code block, which would render the raw
+            # HTML as text instead of rendering it.
+            cards.append(
+                f'<div style="background:{bg};padding:14px 18px;border-radius:10px;'
+                f'border-left:4px solid {accent};flex:1;min-width:180px;">'
+                f'<div style="font-size:11px;color:#aaa;letter-spacing:1.5px;font-weight:600;">{label}</div>'
+                f'<div style="font-size:24px;color:{accent};font-weight:700;'
+                f"font-family:'Space Mono',monospace;margin:4px 0;\">"
+                f'{roi_pct:+.1f}%</div>'
+                f'<div style="font-size:11px;color:#ccc;">'
+                f"{s['win_pct']:.0f}% W &middot; {s['w']}-{s['l']}-{s['p']} lifetime"
+                f'</div></div>'
+            )
+        banner_html = (
+            '<div style="margin:6px 0 18px 0;">'
+            '<div style="font-size:11px;color:#888;letter-spacing:2px;font-weight:600;margin-bottom:8px;">'
+            'LIVE TRACK RECORD — UPDATED AFTER EVERY GRADE RUN</div>'
+            '<div style="display:flex;gap:10px;flex-wrap:wrap;">'
+            + ''.join(cards) +
+            '</div></div>'
+        )
+        st.markdown(banner_html, unsafe_allow_html=True)
 
     if not slate or not slate.get("games"):
         st.warning("No slate cached. Run `python src/pipeline/prediction_run.py` first.")
