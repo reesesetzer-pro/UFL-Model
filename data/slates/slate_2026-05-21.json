@@ -290,8 +290,8 @@
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
-            "consensus_prob_a": 0.5032424281092922,
-            "consensus_prob_b": 0.49675757189070796,
+            "consensus_prob_a": 0.5027816438594757,
+            "consensus_prob_b": 0.49721835614052445,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -383,7 +383,7 @@
           "market": "total",
           "side": "over",
           "p_model": 0.5889,
-          "p_market": 0.5032,
+          "p_market": 0.5028,
           "book": "fanduel",
           "american_odds": -110.0,
           "decimal_odds": 1.9091,
@@ -399,7 +399,7 @@
           "market": "total",
           "side": "under",
           "p_model": 0.4111,
-          "p_market": 0.4968,
+          "p_market": 0.4972,
           "book": "draftkings",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
@@ -472,8 +472,8 @@
           "spreads": {
             "side_a_label": "Louisville Kings",
             "side_b_label": "Dallas Renegades",
-            "consensus_prob_a": 0.5054832304050436,
-            "consensus_prob_b": 0.4945167695949566,
+            "consensus_prob_a": 0.5036401559857442,
+            "consensus_prob_b": 0.496359844014256,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -484,8 +484,8 @@
             ],
             "consensus_point": -1.8,
             "best_price_a": {
-              "book": "fanduel",
-              "odds": -110.0
+              "book": "williamhill_us",
+              "odds": -109.0
             },
             "best_price_b": {
               "book": "draftkings",
@@ -556,14 +556,14 @@
           "market": "spread",
           "side": "home_spread",
           "p_model": 0.591,
-          "p_market": 0.5055,
-          "book": "fanduel",
-          "american_odds": -110.0,
-          "decimal_odds": 1.9091,
-          "edge_prob": 0.0671,
-          "edge_ev": 0.1282,
+          "p_market": 0.5036,
+          "book": "williamhill_us",
+          "american_odds": -109.0,
+          "decimal_odds": 1.9174,
+          "edge_prob": 0.0694,
+          "edge_ev": 0.1331,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.141,
+          "full_kelly_pct": 0.1451,
           "passes_threshold": true,
           "reason": ""
         },
@@ -572,7 +572,7 @@
           "market": "spread",
           "side": "away_spread",
           "p_model": 0.409,
-          "p_market": 0.4945,
+          "p_market": 0.4964,
           "book": "draftkings",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
