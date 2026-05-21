@@ -62,8 +62,8 @@
           "spreads": {
             "side_a_label": "Orlando Storm",
             "side_b_label": "DC Defenders",
-            "consensus_prob_a": 0.5000065943680385,
-            "consensus_prob_b": 0.4999934056319616,
+            "consensus_prob_a": 0.5018496687873378,
+            "consensus_prob_b": 0.49815033121266233,
             "n_books": 5,
             "books_used": [
               "draftkings",
@@ -74,8 +74,8 @@
             ],
             "consensus_point": -2.5,
             "best_price_a": {
-              "book": "williamhill_us",
-              "odds": -109.0
+              "book": "fanduel",
+              "odds": -110.0
             },
             "best_price_b": {
               "book": "draftkings",
@@ -146,14 +146,14 @@
           "market": "spread",
           "side": "home_spread",
           "p_model": 0.3724,
-          "p_market": 0.5,
-          "book": "williamhill_us",
-          "american_odds": -109.0,
-          "decimal_odds": 1.9174,
-          "edge_prob": -0.1491,
-          "edge_ev": -0.2859,
+          "p_market": 0.5018,
+          "book": "fanduel",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": -0.1514,
+          "edge_ev": -0.289,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.3116,
+          "full_kelly_pct": -0.3179,
           "passes_threshold": false,
           "reason": ""
         },
@@ -162,7 +162,7 @@
           "market": "spread",
           "side": "away_spread",
           "p_model": 0.6276,
-          "p_market": 0.5,
+          "p_market": 0.4982,
           "book": "draftkings",
           "american_odds": -108.0,
           "decimal_odds": 1.9259,
