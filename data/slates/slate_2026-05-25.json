@@ -39,13 +39,15 @@
           "h2h": {
             "side_a_label": "St. Louis Battlehawks",
             "side_b_label": "Dallas Renegades",
-            "consensus_prob_a": 0.6460497617574009,
-            "consensus_prob_b": 0.3539502382425992,
-            "n_books": 3,
+            "consensus_prob_a": 0.6461048061456321,
+            "consensus_prob_b": 0.35389519385436796,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "hardrockbet",
-              "fanduel"
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": null,
             "best_price_a": {
@@ -62,18 +64,22 @@
             "side_b_label": "Dallas Renegades",
             "consensus_prob_a": 0.5000000000000001,
             "consensus_prob_b": 0.5000000000000001,
-            "n_books": 1,
+            "n_books": 5,
             "books_used": [
-              "draftkings"
+              "draftkings",
+              "hardrockbet",
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": -3.5,
             "best_price_a": {
-              "book": "draftkings",
-              "odds": -110.0
+              "book": "williamhill_us",
+              "odds": -109.0
             },
             "best_price_b": {
-              "book": "draftkings",
-              "odds": -110.0
+              "book": "williamhill_us",
+              "odds": -109.0
             }
           },
           "totals": {
@@ -81,11 +87,13 @@
             "side_b_label": "Under",
             "consensus_prob_a": 0.5000000000000001,
             "consensus_prob_b": 0.5000000000000001,
-            "n_books": 3,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "hardrockbet",
-              "fanduel"
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": 46.5,
             "best_price_a": {
@@ -106,14 +114,14 @@
           "market": "moneyline",
           "side": "home_ml",
           "p_model": 0.7523,
-          "p_market": 0.646,
+          "p_market": 0.6461,
           "book": "fanduel",
           "american_odds": -195.0,
           "decimal_odds": 1.5128,
           "edge_prob": 0.0913,
           "edge_ev": 0.1381,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.2692,
+          "full_kelly_pct": 0.2693,
           "passes_threshold": true,
           "reason": ""
         },
@@ -122,12 +130,12 @@
           "market": "moneyline",
           "side": "away_ml",
           "p_model": 0.2477,
-          "p_market": 0.354,
+          "p_market": 0.3539,
           "book": "hardrockbet",
           "american_odds": 165.0,
           "decimal_odds": 2.65,
           "edge_prob": -0.1296,
-          "edge_ev": -0.3435,
+          "edge_ev": -0.3436,
           "stake_pct": 0.0,
           "full_kelly_pct": -0.2082,
           "passes_threshold": false,
@@ -139,13 +147,13 @@
           "side": "home_spread",
           "p_model": 0.6224,
           "p_market": 0.5,
-          "book": "draftkings",
-          "american_odds": -110.0,
-          "decimal_odds": 1.9091,
-          "edge_prob": 0.0986,
-          "edge_ev": 0.1882,
+          "book": "williamhill_us",
+          "american_odds": -109.0,
+          "decimal_odds": 1.9174,
+          "edge_prob": 0.1009,
+          "edge_ev": 0.1934,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.2071,
+          "full_kelly_pct": 0.2108,
           "passes_threshold": true,
           "reason": ""
         },
@@ -155,13 +163,13 @@
           "side": "away_spread",
           "p_model": 0.3776,
           "p_market": 0.5,
-          "book": "draftkings",
-          "american_odds": -110.0,
-          "decimal_odds": 1.9091,
-          "edge_prob": -0.1462,
-          "edge_ev": -0.2791,
+          "book": "williamhill_us",
+          "american_odds": -109.0,
+          "decimal_odds": 1.9174,
+          "edge_prob": -0.1439,
+          "edge_ev": -0.276,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.3071,
+          "full_kelly_pct": -0.3008,
           "passes_threshold": false,
           "reason": ""
         },
