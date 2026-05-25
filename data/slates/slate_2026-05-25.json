@@ -1,0 +1,205 @@
+{
+  "as_of": "2026-05-25",
+  "weight_used": 0.7,
+  "games": [
+    {
+      "sb_id": 656676,
+      "week": 10,
+      "date": "2026-05-29",
+      "home": "STL",
+      "away": "DAL",
+      "model": {
+        "spread": -8.4,
+        "total": 45.07,
+        "home_score": 26.7,
+        "away_score": 18.3,
+        "home_wp": 0.7978,
+        "components": {
+          "elo_diff_inc_hfa": 200.6,
+          "spread_elo": 6.08,
+          "spread_eff": 10.73,
+          "ppd_home": 2.72,
+          "ppd_away": 1.68,
+          "expected_drives_per_team": 10.25,
+          "weather_mult": 1.0,
+          "weather": ""
+        }
+      },
+      "derived": {
+        "h1_spread": -4.62,
+        "h1_total": 20.73,
+        "home_team_total": 26.73,
+        "away_team_total": 18.34
+      },
+      "market": {
+        "home_team": "St. Louis Battlehawks",
+        "away_team": "Dallas Renegades",
+        "commence_time": "2026-05-30T00:00:00Z",
+        "markets": {
+          "h2h": {
+            "side_a_label": "St. Louis Battlehawks",
+            "side_b_label": "Dallas Renegades",
+            "consensus_prob_a": 0.6460497617574009,
+            "consensus_prob_b": 0.3539502382425992,
+            "n_books": 3,
+            "books_used": [
+              "draftkings",
+              "hardrockbet",
+              "fanduel"
+            ],
+            "consensus_point": null,
+            "best_price_a": {
+              "book": "fanduel",
+              "odds": -195.0
+            },
+            "best_price_b": {
+              "book": "hardrockbet",
+              "odds": 165.0
+            }
+          },
+          "spreads": {
+            "side_a_label": "St. Louis Battlehawks",
+            "side_b_label": "Dallas Renegades",
+            "consensus_prob_a": 0.5000000000000001,
+            "consensus_prob_b": 0.5000000000000001,
+            "n_books": 1,
+            "books_used": [
+              "draftkings"
+            ],
+            "consensus_point": -3.5,
+            "best_price_a": {
+              "book": "draftkings",
+              "odds": -110.0
+            },
+            "best_price_b": {
+              "book": "draftkings",
+              "odds": -110.0
+            }
+          },
+          "totals": {
+            "side_a_label": "Over",
+            "side_b_label": "Under",
+            "consensus_prob_a": 0.5000000000000001,
+            "consensus_prob_b": 0.5000000000000001,
+            "n_books": 3,
+            "books_used": [
+              "draftkings",
+              "hardrockbet",
+              "fanduel"
+            ],
+            "consensus_point": 46.5,
+            "best_price_a": {
+              "book": "draftkings",
+              "odds": -110.0
+            },
+            "best_price_b": {
+              "book": "draftkings",
+              "odds": -110.0
+            }
+          }
+        }
+      },
+      "bayes_weight": 0.7,
+      "candidates": [
+        {
+          "label": "STL ML",
+          "market": "moneyline",
+          "side": "home_ml",
+          "p_model": 0.7523,
+          "p_market": 0.646,
+          "book": "fanduel",
+          "american_odds": -195.0,
+          "decimal_odds": 1.5128,
+          "edge_prob": 0.0913,
+          "edge_ev": 0.1381,
+          "stake_pct": 0.02,
+          "full_kelly_pct": 0.2692,
+          "passes_threshold": true,
+          "reason": ""
+        },
+        {
+          "label": "DAL ML",
+          "market": "moneyline",
+          "side": "away_ml",
+          "p_model": 0.2477,
+          "p_market": 0.354,
+          "book": "hardrockbet",
+          "american_odds": 165.0,
+          "decimal_odds": 2.65,
+          "edge_prob": -0.1296,
+          "edge_ev": -0.3435,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.2082,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "STL -3.5",
+          "market": "spread",
+          "side": "home_spread",
+          "p_model": 0.6224,
+          "p_market": 0.5,
+          "book": "draftkings",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": 0.0986,
+          "edge_ev": 0.1882,
+          "stake_pct": 0.02,
+          "full_kelly_pct": 0.2071,
+          "passes_threshold": true,
+          "reason": ""
+        },
+        {
+          "label": "DAL +3.5",
+          "market": "spread",
+          "side": "away_spread",
+          "p_model": 0.3776,
+          "p_market": 0.5,
+          "book": "draftkings",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": -0.1462,
+          "edge_ev": -0.2791,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.3071,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "Over 46.5",
+          "market": "total",
+          "side": "over",
+          "p_model": 0.4725,
+          "p_market": 0.5,
+          "book": "draftkings",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": -0.0513,
+          "edge_ev": -0.0979,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.1077,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "Under 46.5",
+          "market": "total",
+          "side": "under",
+          "p_model": 0.5275,
+          "p_market": 0.5,
+          "book": "draftkings",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": 0.0037,
+          "edge_ev": 0.007,
+          "stake_pct": 0.0,
+          "full_kelly_pct": 0.0077,
+          "passes_threshold": false,
+          "reason": ""
+        }
+      ]
+    }
+  ],
+  "n_candidates_passing": 2,
+  "n_total_candidates": 6
+}
