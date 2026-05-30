@@ -39,14 +39,15 @@
           "h2h": {
             "side_a_label": "Birmingham Stallions",
             "side_b_label": "Houston Gamblers",
-            "consensus_prob_a": 0.5562556731979414,
-            "consensus_prob_b": 0.44374432680205866,
-            "n_books": 4,
+            "consensus_prob_a": 0.5654976318553002,
+            "consensus_prob_b": 0.43450236814469995,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "fanduel",
               "hardrockbet",
-              "betmgm"
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": null,
             "best_price_a": {
@@ -54,21 +55,22 @@
               "odds": -125.0
             },
             "best_price_b": {
-              "book": "fanduel",
-              "odds": 120.0
+              "book": "williamhill_us",
+              "odds": 126.0
             }
           },
           "spreads": {
             "side_a_label": "Birmingham Stallions",
             "side_b_label": "Houston Gamblers",
-            "consensus_prob_a": 0.5017459834413072,
-            "consensus_prob_b": 0.49825401655869295,
-            "n_books": 4,
+            "consensus_prob_a": 0.503253049908422,
+            "consensus_prob_b": 0.4967469500915781,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "fanduel",
               "hardrockbet",
-              "betmgm"
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": -2.0,
             "best_price_a": {
@@ -83,14 +85,15 @@
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
-            "consensus_prob_a": 0.5029011136245531,
-            "consensus_prob_b": 0.4970988863754471,
-            "n_books": 4,
+            "consensus_prob_a": 0.5023208908996425,
+            "consensus_prob_b": 0.4976791091003577,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "fanduel",
               "hardrockbet",
-              "betmgm"
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": 44.5,
             "best_price_a": {
@@ -110,15 +113,15 @@
           "label": "BHM ML",
           "market": "moneyline",
           "side": "home_ml",
-          "p_model": 0.6327,
-          "p_market": 0.5563,
+          "p_model": 0.6355,
+          "p_market": 0.5655,
           "book": "hardrockbet",
           "american_odds": -125.0,
           "decimal_odds": 1.8,
-          "edge_prob": 0.0772,
-          "edge_ev": 0.1389,
+          "edge_prob": 0.0799,
+          "edge_ev": 0.1439,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.1736,
+          "full_kelly_pct": 0.1799,
           "passes_threshold": true,
           "reason": ""
         },
@@ -126,15 +129,15 @@
           "label": "HOU ML",
           "market": "moneyline",
           "side": "away_ml",
-          "p_model": 0.3673,
-          "p_market": 0.4437,
-          "book": "fanduel",
-          "american_odds": 120.0,
-          "decimal_odds": 2.2,
-          "edge_prob": -0.0873,
-          "edge_ev": -0.192,
+          "p_model": 0.3645,
+          "p_market": 0.4345,
+          "book": "williamhill_us",
+          "american_odds": 126.0,
+          "decimal_odds": 2.26,
+          "edge_prob": -0.078,
+          "edge_ev": -0.1762,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.16,
+          "full_kelly_pct": -0.1399,
           "passes_threshold": false,
           "reason": ""
         },
@@ -143,7 +146,7 @@
           "market": "spread",
           "side": "home_spread",
           "p_model": 0.5578,
-          "p_market": 0.5017,
+          "p_market": 0.5033,
           "book": "betmgm",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
@@ -159,7 +162,7 @@
           "market": "spread",
           "side": "away_spread",
           "p_model": 0.4422,
-          "p_market": 0.4983,
+          "p_market": 0.4967,
           "book": "fanduel",
           "american_odds": 100.0,
           "decimal_odds": 2.0,
@@ -175,7 +178,7 @@
           "market": "total",
           "side": "over",
           "p_model": 0.4799,
-          "p_market": 0.5029,
+          "p_market": 0.5023,
           "book": "fanduel",
           "american_odds": -110.0,
           "decimal_odds": 1.9091,
@@ -191,7 +194,7 @@
           "market": "total",
           "side": "under",
           "p_model": 0.5201,
-          "p_market": 0.4971,
+          "p_market": 0.4977,
           "book": "draftkings",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
@@ -264,14 +267,15 @@
           "spreads": {
             "side_a_label": "DC Defenders",
             "side_b_label": "Orlando Storm",
-            "consensus_prob_a": 0.5000000000000001,
-            "consensus_prob_b": 0.5000000000000001,
-            "n_books": 4,
+            "consensus_prob_a": 0.5016302226972729,
+            "consensus_prob_b": 0.4983697773027272,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "fanduel",
               "hardrockbet",
-              "betmgm"
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": 1.5,
             "best_price_a": {
@@ -286,14 +290,15 @@
           "totals": {
             "side_a_label": "Over",
             "side_b_label": "Under",
-            "consensus_prob_a": 0.49419777275089405,
-            "consensus_prob_b": 0.5058022272491061,
-            "n_books": 4,
+            "consensus_prob_a": 0.49373962727616866,
+            "consensus_prob_b": 0.5062603727238314,
+            "n_books": 5,
             "books_used": [
               "draftkings",
               "fanduel",
               "hardrockbet",
-              "betmgm"
+              "betmgm",
+              "williamhill_us"
             ],
             "consensus_point": 47.5,
             "best_price_a": {
@@ -346,7 +351,7 @@
           "market": "spread",
           "side": "home_spread",
           "p_model": 0.6265,
-          "p_market": 0.5,
+          "p_market": 0.5016,
           "book": "fanduel",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
@@ -362,7 +367,7 @@
           "market": "spread",
           "side": "away_spread",
           "p_model": 0.3735,
-          "p_market": 0.5,
+          "p_market": 0.4984,
           "book": "hardrockbet",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
@@ -378,7 +383,7 @@
           "market": "total",
           "side": "over",
           "p_model": 0.4103,
-          "p_market": 0.4942,
+          "p_market": 0.4937,
           "book": "draftkings",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
@@ -394,7 +399,7 @@
           "market": "total",
           "side": "under",
           "p_model": 0.5897,
-          "p_market": 0.5058,
+          "p_market": 0.5063,
           "book": "fanduel",
           "american_odds": -110.0,
           "decimal_odds": 1.9091,
@@ -467,15 +472,14 @@
           "spreads": {
             "side_a_label": "Columbus Aviators",
             "side_b_label": "Louisville Kings",
-            "consensus_prob_a": 0.5037136502215968,
-            "consensus_prob_b": 0.4962863497784033,
-            "n_books": 5,
+            "consensus_prob_a": 0.5058022272491061,
+            "consensus_prob_b": 0.49419777275089405,
+            "n_books": 4,
             "books_used": [
               "draftkings",
               "fanduel",
               "hardrockbet",
-              "betmgm",
-              "williamhill_us"
+              "betmgm"
             ],
             "consensus_point": 2.5,
             "best_price_a": {
@@ -551,7 +555,7 @@
           "market": "spread",
           "side": "home_spread",
           "p_model": 0.5083,
-          "p_market": 0.5037,
+          "p_market": 0.5058,
           "book": "draftkings",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
@@ -567,7 +571,7 @@
           "market": "spread",
           "side": "away_spread",
           "p_model": 0.4917,
-          "p_market": 0.4963,
+          "p_market": 0.4942,
           "book": "fanduel",
           "american_odds": -105.0,
           "decimal_odds": 1.9524,
