@@ -165,6 +165,23 @@ SCHEDULE_2026: list[GameSlot] = [
     GameSlot(656677, 10, date(2026, 5, 30), "BHM", "HOU", "ESPN2"),
     GameSlot(656678, 10, date(2026, 5, 31), "DC",  "ORL", "ABC"),
     GameSlot(656679, 10, date(2026, 5, 31), "CLB", "LOU", "FOX"),
+
+    # ---- 2026 PLAYOFFS ----------------------------------------------------
+    # Added 2026-06-06 when the slate generator showed "upcoming (next 4d): 0"
+    # because schedule.py only had the 40 regular-season games. Playoff IDs
+    # continue sequentially (656680+).
+    # Conference Semifinals — Sat Jun 7. Matchups + kickoff windows from
+    # Odds API event feed:
+    #   DC @ ORL (7pm ET)  → home=ORL, away=DC
+    #   LOU @ STL (10pm ET) → home=STL, away=LOU
+    # NB: GameSlot field order is (sb_id, week, date, home, away, network).
+    GameSlot(656680, 11, date(2026, 6, 7),  "ORL", "DC",  "FOX"),
+    GameSlot(656681, 11, date(2026, 6, 7),  "STL", "LOU", "FOX"),
+    # Championship — Sat Jun 13 at Audi Field (DC). Matchups TBD by semifinals;
+    # we list TBD/TBD as placeholders so the slot exists in the schedule and
+    # the prediction_run pipeline can attach to it. The Odds API will fill
+    # in the actual teams once they're decided.
+    GameSlot(656682, 12, date(2026, 6, 13), "TBD", "TBD", "ABC"),
 ]
 
 
@@ -231,5 +248,5 @@ if __name__ == "__main__":
     print(f"Teams: {len(TEAMS)}")
     print(f"Sample game: {SCHEDULE_2026[0]}")
     by_id = schedule_by_id()
-    assert len(by_id) == 40, "Expected 40 unique sb_ids"
+    assert len(by_id) == 43, "Expected 40 regular-season + 3 playoff games"
     print(f"Game ID range: {min(by_id)} - {max(by_id)}")
