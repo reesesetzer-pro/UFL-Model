@@ -1,0 +1,28 @@
+game_id,home_team,away_team,commence_time,book,market,last_update,home_price,away_price,over_price,under_price,point
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,draftkings,h2h,2026-06-07T21:06:57Z,550,-920,,,
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,draftkings,spreads,2026-06-07T21:06:57Z,-115,-115,,,9.5
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,draftkings,totals,2026-06-07T21:06:57Z,,,-115,-115,42.5
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,betmgm,h2h,2026-06-07T21:08:07Z,450,-750,,,
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,betmgm,spreads,2026-06-07T21:08:07Z,100,-135,,,7.5
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,betmgm,totals,2026-06-07T21:08:07Z,,,-120,-110,42.5
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,hardrockbet,h2h,2026-06-07T21:03:09Z,400,-650,,,
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,hardrockbet,spreads,2026-06-07T21:03:09Z,-120,-110,,,8.5
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,hardrockbet,totals,2026-06-07T21:03:09Z,,,-115,-115,42.5
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,williamhill_us,h2h,2026-06-07T21:05:59Z,380,-600,,,
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,williamhill_us,spreads,2026-06-07T21:05:59Z,-110,-121,,,7.5
+9502e5e082874b731dceeef49cda8e90,Orlando Storm,DC Defenders,2026-06-07T19:06:00Z,williamhill_us,totals,2026-06-07T21:05:59Z,,,-108,-121,42.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,draftkings,h2h,2026-06-07T21:06:57Z,-135,114,,,
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,draftkings,spreads,2026-06-07T21:06:57Z,-110,-110,,,-2.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,draftkings,totals,2026-06-07T21:06:57Z,,,-112,-108,46.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,betmgm,h2h,2026-06-07T21:08:07Z,-120,100,,,
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,betmgm,spreads,2026-06-07T21:08:07Z,-110,-110,,,-1.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,betmgm,totals,2026-06-07T21:08:07Z,,,-110,-110,46.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,fanduel,h2h,2026-06-07T21:07:49Z,-120,100,,,
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,fanduel,spreads,2026-06-07T21:07:49Z,-110,-110,,,-1.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,fanduel,totals,2026-06-07T21:07:49Z,,,-110,-110,45.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,hardrockbet,h2h,2026-06-07T21:07:50Z,-120,100,,,
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,hardrockbet,spreads,2026-06-07T21:07:50Z,-110,-110,,,-1.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,hardrockbet,totals,2026-06-07T21:07:50Z,,,-115,-105,45.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,williamhill_us,h2h,2026-06-07T21:05:59Z,-125,106,,,
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,williamhill_us,spreads,2026-06-07T21:05:59Z,-115,-104,,,-1.5
+be815ecf22bfe282ffadc30a1fe6186c,St. Louis Battlehawks,Louisville Kings,2026-06-07T22:00:00Z,williamhill_us,totals,2026-06-07T21:05:59Z,,,-117,-103,45.5
