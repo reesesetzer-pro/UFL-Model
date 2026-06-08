@@ -1,0 +1,541 @@
+{
+  "game_id": 656681,
+  "venue": {
+    "vis_id": "TSU",
+    "home_id": "UTA",
+    "vis_name": "Tarleton State",
+    "home_name": "UT Arlington",
+    "date": "03/27/2026",
+    "start_time": "5:04 PM",
+    "end_time": "7:17 PM",
+    "duration": "2:13",
+    "location": "Arlington, TX",
+    "stadium": "Allan Saxe Field",
+    "attendance": 160,
+    "temp_f": null,
+    "wind": null,
+    "weather": null,
+    "week": null,
+    "season": 2025,
+    "league": null
+  },
+  "rules": {
+    "quarters": null,
+    "minutes_per": null,
+    "downs": null,
+    "yards_first": null,
+    "ko_spot": null,
+    "tb_spot": null,
+    "ko_tb_spot": null,
+    "pat_spot": null,
+    "pat2_spot": null,
+    "pat3_spot": null,
+    "safety_spot": null,
+    "td_points": null,
+    "fg_points": null,
+    "fg4_points": null,
+    "pat_options": null,
+    "field_yards": null,
+    "timeouts_per_half": null
+  },
+  "officials": [],
+  "home_totals": {
+    "team_abbr": "UTA",
+    "team_name": "UT Arlington",
+    "record_text": "14-16",
+    "is_home": true,
+    "linescore_total": null,
+    "line_periods": [
+      {
+        "period": 1,
+        "score": 0
+      },
+      {
+        "period": 2,
+        "score": 0
+      },
+      {
+        "period": 3,
+        "score": 0
+      },
+      {
+        "period": 4,
+        "score": 0
+      },
+      {
+        "period": 5,
+        "score": 0
+      }
+    ],
+    "plays": null,
+    "total_yards": null,
+    "yards_per_play": null
+  },
+  "away_totals": {
+    "team_abbr": "TSU",
+    "team_name": "Tarleton State",
+    "record_text": "21-15",
+    "is_home": false,
+    "linescore_total": null,
+    "line_periods": [
+      {
+        "period": 1,
+        "score": 0
+      },
+      {
+        "period": 2,
+        "score": 0
+      },
+      {
+        "period": 3,
+        "score": 0
+      },
+      {
+        "period": 4,
+        "score": 0
+      },
+      {
+        "period": 5,
+        "score": 0
+      }
+    ],
+    "plays": null,
+    "total_yards": null,
+    "yards_per_play": null
+  },
+  "home_players": [
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "00",
+      "full_name": "Creech, Kelsey",
+      "position": "lf",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "1",
+      "full_name": "Maldonado, Talia",
+      "position": "2b",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "3",
+      "full_name": "Feeney, Valeria",
+      "position": "dp",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "4",
+      "full_name": "Holland, Peyton",
+      "position": "ss",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "15",
+      "full_name": "Sailor, Kaitlyn",
+      "position": "3b",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "20",
+      "full_name": "Smith, Jordan",
+      "position": "PR",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "22",
+      "full_name": "Schweitzer, Kaylee",
+      "position": "rf",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "25",
+      "full_name": "McNulty, Mia",
+      "position": "c",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "27",
+      "full_name": "McDonnell, Madi",
+      "position": "p",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "50",
+      "full_name": "Furniss, Maddie",
+      "position": "p",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "80",
+      "full_name": "McClarity, Dee",
+      "position": "1b",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "88",
+      "full_name": "Neises, Marley",
+      "position": "cf",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "2",
+      "full_name": "Cooper, Cameron",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "5",
+      "full_name": "Minor, Taylor",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "6",
+      "full_name": "Bowlin, Kynlee",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "8",
+      "full_name": "Stone, Mallory",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "9",
+      "full_name": "Bautista, Kailee",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "13",
+      "full_name": "Sralik, Hailey Lynn",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "17",
+      "full_name": "Soza, Vanessa",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "UTA",
+      "player_code": null,
+      "uniform": "44",
+      "full_name": "Spriggs, Camila",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    }
+  ],
+  "away_players": [
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "01",
+      "full_name": "Gilliland, Mikaila",
+      "position": "PR",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "02",
+      "full_name": "Wittram, Addison",
+      "position": "2b",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "03",
+      "full_name": "Fox, Hayden",
+      "position": "c",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "04",
+      "full_name": "Runyan, Madison",
+      "position": "ss",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "05",
+      "full_name": "Vickers, Macie",
+      "position": "dp",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "06",
+      "full_name": "Pannill, Braylin",
+      "position": "3b",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "11",
+      "full_name": "Wilson, Mikayla",
+      "position": "rf",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "12",
+      "full_name": "Debose, Mariah",
+      "position": "cf",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "13",
+      "full_name": "Schultz, Shelby",
+      "position": "p",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "15",
+      "full_name": "Riney, Gracie",
+      "position": "p",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "21",
+      "full_name": "Schultz, Casey",
+      "position": "lf",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "23",
+      "full_name": "Duke, Jaelynn",
+      "position": "cf/p",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "24",
+      "full_name": "Bojkovic, Isabella",
+      "position": "1b",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "28",
+      "full_name": "McDaniel, Riley",
+      "position": "PR",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "00",
+      "full_name": "McKean, Taylor",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "07",
+      "full_name": "Hughes, Haley",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "09",
+      "full_name": "Beck, Sadie",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "10",
+      "full_name": "Reed, Hannah",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "14",
+      "full_name": "Pemberton, Avery",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "16",
+      "full_name": "Brunner, Katherine",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "18",
+      "full_name": "Rayngay, Gisele",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "19",
+      "full_name": "Higginbotham, Alyson",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "20",
+      "full_name": "Budisalovich, Alyssa",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "25",
+      "full_name": "Dowell, Abigail",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "26",
+      "full_name": "Poore, Scarlett",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "27",
+      "full_name": "Wigington, Hailey",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "TSU",
+      "player_code": null,
+      "uniform": "30",
+      "full_name": "Aguilar, Alex",
+      "position": null,
+      "games_started": null,
+      "games_played": 0
+    }
+  ],
+  "drives": [],
+  "scoring_plays": [],
+  "fgas": [],
+  "plays": [],
+  "week": 11,
+  "home": "STL",
+  "away": "LOU",
+  "game_date": "2026-06-07"
+}

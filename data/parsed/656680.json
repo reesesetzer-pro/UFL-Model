@@ -1,0 +1,349 @@
+{
+  "game_id": 656680,
+  "venue": {
+    "vis_id": "SJU",
+    "home_id": "UNM",
+    "vis_name": "Saint Joseph's",
+    "home_name": "New Mexico",
+    "date": "03/24/2026",
+    "start_time": "09:05 PM ET",
+    "end_time": "11:08 PM ET",
+    "duration": "2:02",
+    "location": "The Pit - Albuquerque, NM",
+    "stadium": null,
+    "attendance": 8054,
+    "temp_f": null,
+    "wind": null,
+    "weather": null,
+    "week": null,
+    "season": null,
+    "league": null
+  },
+  "rules": {
+    "quarters": null,
+    "minutes_per": null,
+    "downs": null,
+    "yards_first": null,
+    "ko_spot": null,
+    "tb_spot": null,
+    "ko_tb_spot": null,
+    "pat_spot": null,
+    "pat2_spot": null,
+    "pat3_spot": null,
+    "safety_spot": null,
+    "td_points": null,
+    "fg_points": null,
+    "fg4_points": null,
+    "pat_options": null,
+    "field_yards": null,
+    "timeouts_per_half": null
+  },
+  "officials": [
+    {
+      "role": "text",
+      "name": "Mike Littlewood, Nate Harris, Matthew Rukasin",
+      "uniform": null
+    }
+  ],
+  "home_totals": {
+    "team_abbr": "UNM",
+    "team_name": "New Mexico",
+    "record_text": null,
+    "is_home": true,
+    "linescore_total": 84,
+    "line_periods": [
+      {
+        "period": 1,
+        "score": 37
+      },
+      {
+        "period": 2,
+        "score": 47
+      },
+      {
+        "period": 3,
+        "score": 0
+      },
+      {
+        "period": 4,
+        "score": 0
+      },
+      {
+        "period": 5,
+        "score": 0
+      }
+    ],
+    "plays": null,
+    "total_yards": null,
+    "yards_per_play": null
+  },
+  "away_totals": {
+    "team_abbr": "SJU",
+    "team_name": "Saint Joseph's",
+    "record_text": null,
+    "is_home": false,
+    "linescore_total": 69,
+    "line_periods": [
+      {
+        "period": 1,
+        "score": 39
+      },
+      {
+        "period": 2,
+        "score": 30
+      },
+      {
+        "period": 3,
+        "score": 0
+      },
+      {
+        "period": 4,
+        "score": 0
+      },
+      {
+        "period": 5,
+        "score": 0
+      }
+    ],
+    "plays": null,
+    "total_yards": null,
+    "yards_per_play": null
+  },
+  "home_players": [
+    {
+      "team_abbr": "UNM",
+      "player_code": "2146775",
+      "uniform": "1",
+      "full_name": "Albury,Deyton",
+      "position": "G",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "1932406",
+      "uniform": "2",
+      "full_name": "Miller,Tajavis",
+      "position": "G",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "1623679",
+      "uniform": "3",
+      "full_name": "Haupt,Luke",
+      "position": "G",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "2543851",
+      "uniform": "4",
+      "full_name": "Tenette,Uriah",
+      "position": "G",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "1890494",
+      "uniform": "5",
+      "full_name": "Chol,Antonio",
+      "position": "F",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "2543853",
+      "uniform": "10",
+      "full_name": "Buljan,Tomislav",
+      "position": "F",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "2543854",
+      "uniform": "23",
+      "full_name": "Hall,Jake",
+      "position": "G",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "2543855",
+      "uniform": "29",
+      "full_name": "Pons,Timeo",
+      "position": "G",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "1634365",
+      "uniform": "31",
+      "full_name": "Vicentic,Milos",
+      "position": "F",
+      "games_started": 0,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "2099048",
+      "uniform": "35",
+      "full_name": "Rock,JT",
+      "position": "C",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "UNM",
+      "player_code": "TM",
+      "uniform": "TM",
+      "full_name": "TEAM",
+      "position": null,
+      "games_started": null,
+      "games_played": 1
+    }
+  ],
+  "away_players": [
+    {
+      "team_abbr": "SJU",
+      "player_code": "1890501",
+      "uniform": "0",
+      "full_name": "Simpson,Derek",
+      "position": "G",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2322187",
+      "uniform": "1",
+      "full_name": "Kearney,Kevin",
+      "position": "F",
+      "games_started": 0,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2321194",
+      "uniform": "2",
+      "full_name": "Jones II,Deuce",
+      "position": "G",
+      "games_started": 0,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2322189",
+      "uniform": "3",
+      "full_name": "Myers,Khaafiq",
+      "position": "G",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2134483",
+      "uniform": "5",
+      "full_name": "Finkley,Anthony",
+      "position": "F",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2134484",
+      "uniform": "7",
+      "full_name": "Haskins,Dasear",
+      "position": "F",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2321284",
+      "uniform": "10",
+      "full_name": "Smith,Jaden",
+      "position": "C",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2322672",
+      "uniform": "11",
+      "full_name": "Glover-Toscano,Jaiden",
+      "position": "G",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2486700",
+      "uniform": "13",
+      "full_name": "Williford,Austin",
+      "position": "G",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2322196",
+      "uniform": "20",
+      "full_name": "Rayer,Billy",
+      "position": "G",
+      "games_started": 0,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2128694",
+      "uniform": "21",
+      "full_name": "Amadou,Al",
+      "position": "F",
+      "games_started": 0,
+      "games_played": 0
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "1605352",
+      "uniform": "22",
+      "full_name": "Ajogbor,Justice",
+      "position": "F",
+      "games_started": 1,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "2322197",
+      "uniform": "23",
+      "full_name": "Johnson,Mekai",
+      "position": "G",
+      "games_started": 0,
+      "games_played": 1
+    },
+    {
+      "team_abbr": "SJU",
+      "player_code": "TM",
+      "uniform": "TM",
+      "full_name": "TEAM",
+      "position": null,
+      "games_started": null,
+      "games_played": 1
+    }
+  ],
+  "drives": [],
+  "scoring_plays": [],
+  "fgas": [],
+  "plays": [],
+  "week": 11,
+  "home": "ORL",
+  "away": "DC",
+  "game_date": "2026-06-07"
+}
