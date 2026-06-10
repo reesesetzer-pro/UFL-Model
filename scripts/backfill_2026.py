@@ -65,6 +65,18 @@ def main():
         try:
             xml = fetch_game_xml(slot.sb_id, cache_dir=raw_dir, use_cache=not args.force)
             payload = parse_game(xml, slot.sb_id)
+            # Identity check: StatBroadcast IDs are global across every league
+            # they serve — a wrong/guessed sb_id fetches a real XML for some
+            # OTHER sport, and stamping UFL teams onto it creates a chimera
+            # that grades bets against the wrong game (bit us 2026-06-07).
+            venue = payload.get("venue") or {}
+            xml_home = str(venue.get("home_id") or "").strip().upper()
+            xml_away = str(venue.get("vis_id") or "").strip().upper()
+            if (xml_home, xml_away) != (slot.home, slot.away):
+                failed += 1
+                print(f"  ✗ {slot.sb_id} W{slot.week} {slot.away}@{slot.home}: XML is "
+                      f"{xml_away}@{xml_home} — wrong event behind this ID, refusing to write")
+                continue
             payload.setdefault("week", slot.week)
             payload.setdefault("home", slot.home)
             payload.setdefault("away", slot.away)

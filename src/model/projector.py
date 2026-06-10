@@ -76,6 +76,7 @@ def project_game(home: str, away: str,
                  sigma_margin: float = SIGMA_MARGIN,
                  weather_mult: float = 1.0,
                  weather_summary: Optional[str] = None,
+                 neutral: bool = False,
                  ) -> GameProjection:
     """
     home/away: team codes
@@ -92,14 +93,17 @@ def project_game(home: str, away: str,
         league_mu_ppd = league.get("mu_ppd", LEAGUE_MU_PPD)
     if ppd_hfa is None:
         ppd_hfa = league.get("hfa", EFFICIENCY_HFA_PPD)
+    hfa_elo = 0.0 if neutral else HFA_ELO
+    if neutral:
+        ppd_hfa = 0.0
 
     h_elo = elo[home].rating
     a_elo = elo[away].rating
 
     # Elo-spread (positive = home favored)
-    elo_diff_inc_hfa = (h_elo + HFA_ELO) - a_elo
+    elo_diff_inc_hfa = (h_elo + hfa_elo) - a_elo
     spread_elo = elo_to_spread(elo_diff_inc_hfa)
-    home_wp_elo = expected_win_prob(h_elo, a_elo, hfa_for_a=HFA_ELO)
+    home_wp_elo = expected_win_prob(h_elo, a_elo, hfa_for_a=hfa_elo)
 
     # Efficiency-spread
     h = ppd_adj.get(home, {"off": 0.0, "def": 0.0})

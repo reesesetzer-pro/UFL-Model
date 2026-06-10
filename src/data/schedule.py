@@ -102,6 +102,10 @@ class GameSlot:
     away: str
     network: str = ""
     sb_url: str = ""
+    # Declared LAST so the 43 existing positional entries stay valid.
+    # True = designated-home is a formality (e.g. championship at a
+    # pre-committed venue) → projector zeroes HFA.
+    neutral: bool = False
 
     def __post_init__(self):
         if not self.sb_url:
@@ -167,21 +171,23 @@ SCHEDULE_2026: list[GameSlot] = [
     GameSlot(656679, 10, date(2026, 5, 31), "CLB", "LOU", "FOX"),
 
     # ---- 2026 PLAYOFFS ----------------------------------------------------
-    # Added 2026-06-06 when the slate generator showed "upcoming (next 4d): 0"
-    # because schedule.py only had the 40 regular-season games. Playoff IDs
-    # continue sequentially (656680+).
-    # Conference Semifinals — Sat Jun 7. Matchups + kickoff windows from
-    # Odds API event feed:
-    #   DC @ ORL (7pm ET)  → home=ORL, away=DC
-    #   LOU @ STL (10pm ET) → home=STL, away=LOU
-    # NB: GameSlot field order is (sb_id, week, date, home, away, network).
-    GameSlot(656680, 11, date(2026, 6, 7),  "ORL", "DC",  "FOX"),
-    GameSlot(656681, 11, date(2026, 6, 7),  "STL", "LOU", "FOX"),
-    # Championship — Sat Jun 13 at Audi Field (DC). Matchups TBD by semifinals;
-    # we list TBD/TBD as placeholders so the slot exists in the schedule and
-    # the prediction_run pipeline can attach to it. The Odds API will fill
-    # in the actual teams once they're decided.
-    GameSlot(656682, 12, date(2026, 6, 13), "TBD", "TBD", "ABC"),
+    # ⚠ SB-ID CAUTION (learned 2026-06-10): StatBroadcast IDs are GLOBAL
+    # across every league/school they serve, NOT sequential within UFL.
+    # The guessed IDs below (656680+) actually belonged to a college
+    # basketball game and a softball game; backfill ingested them and one
+    # semifinal bet graded against a basketball score. Real playoff XML IDs
+    # were never located — data/parsed/65668{0,1}.json are hand-built from
+    # ESPN finals (`_source` key inside). weekly_update now refuses to write
+    # a parsed JSON whose XML team IDs don't match the slot.
+    # Semifinals — Sat Jun 7 (matchups from Odds API event feed):
+    GameSlot(656680, 11, date(2026, 6, 7),  "ORL", "DC",  "FOX"),   # final: DC 28, ORL 22
+    GameSlot(656681, 11, date(2026, 6, 7),  "STL", "LOU", "FOX"),   # final: LOU 29, STL 20
+    # Championship — Sat Jun 13 at Audi Field on ABC. Odds API designates
+    # LOU as home (event 1db454c1896cae99…) so the slot mirrors that for
+    # odds-join purposes, but the venue is pre-committed (DC's stadium) →
+    # neutral=True zeroes HFA in the projector. DC playing in its own
+    # building is a real but unmodeled edge; flag it in any pick writeup.
+    GameSlot(656682, 12, date(2026, 6, 13), "LOU", "DC", "ABC", neutral=True),
 ]
 
 

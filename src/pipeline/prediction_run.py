@@ -327,9 +327,17 @@ def build_slate(as_of: Optional[date] = None,
     out_games = []
     candidates: list[BetCandidate] = []
     for slot in upcoming:
+        # Placeholder/unknown teams (e.g. "TBD" before a playoff matchup is
+        # set) have no ratings — skip the slot instead of KeyError-ing the
+        # whole pipeline (crashed nightly sync 2026-06-09).
+        if slot.home not in elos or slot.away not in elos:
+            print(f"[slate] ⚠ skipping {slot.matchup()} on {slot.date} — "
+                  f"team(s) not in ratings (placeholder?)")
+            continue
         wx = weather_by_sb_id.get(slot.sb_id, {"mult": 1.0, "summary": ""})
         proj = project_game(slot.home, slot.away, elos, ppd_adj,
-                            weather_mult=wx["mult"], weather_summary=wx["summary"])
+                            weather_mult=wx["mult"], weather_summary=wx["summary"],
+                            neutral=getattr(slot, "neutral", False))
         derived = derive_lines(slot.home, slot.away,
                                model_spread_home=proj.spread,
                                model_total=proj.total)

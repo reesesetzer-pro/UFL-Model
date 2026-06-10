@@ -72,6 +72,20 @@ def load_or_fetch_parsed(sb_id: int, force: bool = False) -> Optional[dict]:
     # Stamp schedule metadata so downstream code (ETL, etc.) can read directly
     slot = schedule_by_id().get(int(sb_id))
     if slot is not None:
+        # Identity check BEFORE stamping: StatBroadcast IDs are global across
+        # every league they serve, so a guessed/wrong sb_id returns a real XML
+        # for some other sport. Stamping UFL teams onto it produces a chimera
+        # file that grades bets against the wrong game (happened 2026-06-07:
+        # a basketball game graded a UFL semifinal). Real UFL XMLs carry our
+        # exact 3-letter codes in venue home_id/vis_id.
+        venue = payload.get("venue") or {}
+        xml_home = str(venue.get("home_id") or "").strip().upper()
+        xml_away = str(venue.get("vis_id") or "").strip().upper()
+        if (xml_home, xml_away) != (slot.home, slot.away):
+            print(f"[err] {sb_id}: XML teams ({xml_away}@{xml_home}) don't match "
+                  f"schedule slot ({slot.away}@{slot.home}) — wrong event behind "
+                  f"this StatBroadcast ID. Refusing to write parsed JSON.")
+            return None
         payload.setdefault("week", slot.week)
         payload.setdefault("home", slot.home)
         payload.setdefault("away", slot.away)
