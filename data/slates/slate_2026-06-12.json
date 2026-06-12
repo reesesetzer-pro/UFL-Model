@@ -72,7 +72,7 @@
               "betmgm",
               "williamhill_us"
             ],
-            "consensus_point": 0.9,
+            "consensus_point": 0.8,
             "best_price_a": {
               "book": "draftkings",
               "odds": 102.0
@@ -142,34 +142,34 @@
           "reason": ""
         },
         {
-          "label": "LOU +0.9",
+          "label": "LOU +0.8",
           "market": "spread",
           "side": "home_spread",
-          "p_model": 0.5743,
+          "p_model": 0.5718,
           "p_market": 0.5016,
           "book": "draftkings",
           "american_odds": 102.0,
           "decimal_odds": 2.02,
-          "edge_prob": 0.0792,
-          "edge_ev": 0.16,
+          "edge_prob": 0.0767,
+          "edge_ev": 0.155,
           "stake_pct": 0.02,
-          "full_kelly_pct": 0.1569,
+          "full_kelly_pct": 0.152,
           "passes_threshold": true,
           "reason": ""
         },
         {
-          "label": "DC -0.9",
+          "label": "DC -0.8",
           "market": "spread",
           "side": "away_spread",
-          "p_model": 0.4257,
+          "p_model": 0.4282,
           "p_market": 0.4984,
           "book": "betmgm",
           "american_odds": 100.0,
           "decimal_odds": 2.0,
-          "edge_prob": -0.0743,
-          "edge_ev": -0.1486,
+          "edge_prob": -0.0718,
+          "edge_ev": -0.1436,
           "stake_pct": 0.0,
-          "full_kelly_pct": -0.1486,
+          "full_kelly_pct": -0.1436,
           "passes_threshold": false,
           "reason": ""
         },
