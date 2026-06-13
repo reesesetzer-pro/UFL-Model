@@ -1,0 +1,213 @@
+{
+  "as_of": "2026-06-13",
+  "weight_used": 0.7,
+  "games": [
+    {
+      "sb_id": 656682,
+      "week": 12,
+      "date": "2026-06-13",
+      "home": "LOU",
+      "away": "DC",
+      "model": {
+        "spread": -2.05,
+        "total": 48.41,
+        "home_score": 25.2,
+        "away_score": 23.2,
+        "home_wp": 0.5908,
+        "components": {
+          "elo_diff_inc_hfa": 114.3,
+          "spread_elo": 3.46,
+          "spread_eff": 0.63,
+          "ppd_home": 2.39,
+          "ppd_away": 2.33,
+          "expected_drives_per_team": 10.25,
+          "weather_mult": 1.0,
+          "weather": ""
+        }
+      },
+      "derived": {
+        "h1_spread": -1.13,
+        "h1_total": 22.27,
+        "home_team_total": 25.23,
+        "away_team_total": 23.18
+      },
+      "market": {
+        "home_team": "Louisville Kings",
+        "away_team": "DC Defenders",
+        "commence_time": "2026-06-13T19:00:00Z",
+        "markets": {
+          "h2h": {
+            "side_a_label": "Louisville Kings",
+            "side_b_label": "DC Defenders",
+            "consensus_prob_a": 0.4939614314476695,
+            "consensus_prob_b": 0.5060385685523305,
+            "n_books": 5,
+            "books_used": [
+              "draftkings",
+              "hardrockbet",
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
+            ],
+            "consensus_point": null,
+            "best_price_a": {
+              "book": "williamhill_us",
+              "odds": 100.0
+            },
+            "best_price_b": {
+              "book": "draftkings",
+              "odds": -108.0
+            }
+          },
+          "spreads": {
+            "side_a_label": "Louisville Kings",
+            "side_b_label": "DC Defenders",
+            "consensus_prob_a": 0.5218848236790037,
+            "consensus_prob_b": 0.4781151763209966,
+            "n_books": 5,
+            "books_used": [
+              "draftkings",
+              "hardrockbet",
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
+            ],
+            "consensus_point": 0.8,
+            "best_price_a": {
+              "book": "draftkings",
+              "odds": 102.0
+            },
+            "best_price_b": {
+              "book": "hardrockbet",
+              "odds": 110.0
+            }
+          },
+          "totals": {
+            "side_a_label": "Over",
+            "side_b_label": "Under",
+            "consensus_prob_a": 0.501637031868143,
+            "consensus_prob_b": 0.4983629681318572,
+            "n_books": 5,
+            "books_used": [
+              "draftkings",
+              "hardrockbet",
+              "fanduel",
+              "betmgm",
+              "williamhill_us"
+            ],
+            "consensus_point": 49.4,
+            "best_price_a": {
+              "book": "hardrockbet",
+              "odds": -110.0
+            },
+            "best_price_b": {
+              "book": "draftkings",
+              "odds": -105.0
+            }
+          }
+        }
+      },
+      "bayes_weight": 0.7,
+      "candidates": [
+        {
+          "label": "LOU ML",
+          "market": "moneyline",
+          "side": "home_ml",
+          "p_model": 0.5617,
+          "p_market": 0.494,
+          "book": "williamhill_us",
+          "american_odds": 100.0,
+          "decimal_odds": 2.0,
+          "edge_prob": 0.0617,
+          "edge_ev": 0.1235,
+          "stake_pct": 0.02,
+          "full_kelly_pct": 0.1235,
+          "passes_threshold": true,
+          "reason": ""
+        },
+        {
+          "label": "DC ML",
+          "market": "moneyline",
+          "side": "away_ml",
+          "p_model": 0.4383,
+          "p_market": 0.506,
+          "book": "draftkings",
+          "american_odds": -108.0,
+          "decimal_odds": 1.9259,
+          "edge_prob": -0.081,
+          "edge_ev": -0.156,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.1684,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "LOU +0.8",
+          "market": "spread",
+          "side": "home_spread",
+          "p_model": 0.5718,
+          "p_market": 0.5219,
+          "book": "draftkings",
+          "american_odds": 102.0,
+          "decimal_odds": 2.02,
+          "edge_prob": 0.0767,
+          "edge_ev": 0.155,
+          "stake_pct": 0.02,
+          "full_kelly_pct": 0.152,
+          "passes_threshold": true,
+          "reason": ""
+        },
+        {
+          "label": "DC -0.8",
+          "market": "spread",
+          "side": "away_spread",
+          "p_model": 0.4282,
+          "p_market": 0.4781,
+          "book": "hardrockbet",
+          "american_odds": 110.0,
+          "decimal_odds": 2.1,
+          "edge_prob": -0.048,
+          "edge_ev": -0.1007,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.0916,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "Over 49.4",
+          "market": "total",
+          "side": "over",
+          "p_model": 0.481,
+          "p_market": 0.5016,
+          "book": "hardrockbet",
+          "american_odds": -110.0,
+          "decimal_odds": 1.9091,
+          "edge_prob": -0.0428,
+          "edge_ev": -0.0817,
+          "stake_pct": 0.0,
+          "full_kelly_pct": -0.0899,
+          "passes_threshold": false,
+          "reason": ""
+        },
+        {
+          "label": "Under 49.4",
+          "market": "total",
+          "side": "under",
+          "p_model": 0.519,
+          "p_market": 0.4984,
+          "book": "draftkings",
+          "american_odds": -105.0,
+          "decimal_odds": 1.9524,
+          "edge_prob": 0.0068,
+          "edge_ev": 0.0132,
+          "stake_pct": 0.0035,
+          "full_kelly_pct": 0.0139,
+          "passes_threshold": false,
+          "reason": ""
+        }
+      ]
+    }
+  ],
+  "n_candidates_passing": 2,
+  "n_total_candidates": 6
+}
