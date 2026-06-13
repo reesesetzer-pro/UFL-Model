@@ -1,0 +1,16 @@
+game_id,home_team,away_team,commence_time,book,market,last_update,home_price,away_price,over_price,under_price,point
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,draftkings,h2h,2026-06-13T17:18:59Z,-115,-105,,,
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,draftkings,spreads,2026-06-13T17:18:59Z,-102,-118,,,-1.5
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,draftkings,totals,2026-06-13T17:18:59Z,,,-115,-105,49.5
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,hardrockbet,h2h,2026-06-13T17:18:58Z,-120,100,,,
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,hardrockbet,spreads,2026-06-13T17:18:58Z,-120,100,,,1.5
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,hardrockbet,totals,2026-06-13T17:18:58Z,,,-110,-110,49.5
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,fanduel,h2h,2026-06-13T17:19:50Z,-115,-105,,,
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,fanduel,spreads,2026-06-13T17:19:50Z,-120,100,,,1.5
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,fanduel,totals,2026-06-13T17:19:50Z,,,-110,-110,49.5
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,betmgm,h2h,2026-06-13T17:19:37Z,-115,-105,,,
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,betmgm,spreads,2026-06-13T17:19:37Z,100,-120,,,-1.5
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,betmgm,totals,2026-06-13T17:19:37Z,,,-110,-110,49.5
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,williamhill_us,h2h,2026-06-13T17:13:43Z,-120,100,,,
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,williamhill_us,spreads,2026-06-13T17:13:43Z,-115,-115,,,-1.0
+1db454c1896cae99f8dc088edc9d6116,Louisville Kings,DC Defenders,2026-06-13T19:00:00Z,williamhill_us,totals,2026-06-13T17:13:43Z,,,-109,-112,49.5
